@@ -5,7 +5,7 @@ export const cards: CardData[] = [
   {
     id: 'profile',
     tag: 'EDITION 2025 // ACTIVE',
-    title: 'Vitor A. Souza',
+    title: 'About-me',
     subtitle: 'Software Engineer & Full-Stack',
     description:
       'Engineering resilient web architectures, distributed systems, and tactile human interfaces at PUC Minas.',
