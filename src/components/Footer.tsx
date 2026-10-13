@@ -1,8 +1,14 @@
+import { motion } from 'motion/react';
 import { competencies, links } from '../data/cards';
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.7, duration: 0.8 }}
+    >
       <div className="footer-row">
         <div className="chips">
           <span className="chips-label">CORE COMPETENCIES:</span>
@@ -23,6 +29,6 @@ export default function Footer() {
         <span>● AVAILABLE FOR COMMISSIONS</span>
         <span>© Vitor A. Souza — All Rights Reserved</span>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

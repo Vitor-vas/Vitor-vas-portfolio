@@ -1,32 +1,35 @@
-import type { CSSProperties } from 'react';
+import { motion } from 'motion/react';
 import type { CardData } from '../types/Index';
 
 interface CardProps {
   card: CardData;
-  offset: number;
+  offset: number; // 0 = centro, negativo = esquerda, positivo = direita
   onSelect: () => void;
 }
 
 export default function Card({ card, offset, onSelect }: CardProps) {
   const isActive = offset === 0;
-
-  // offset: 0 = centro, negativo = esquerda, positivo = direita
-  const style: CSSProperties = {
-    transform: `
-      translateX(${offset * 70}%)
-      translateZ(${-Math.abs(offset) * 80}px)
-      rotateY(${offset * -18}deg)
-      scale(${1 - Math.abs(offset) * 0.06})
-    `,
-    opacity: Math.abs(offset) > 3 ? 0 : 1 - Math.abs(offset) * 0.18,
-    zIndex: 10 - Math.abs(offset),
-    pointerEvents: Math.abs(offset) > 3 ? 'none' : 'auto',
-  };
+  const distance = Math.abs(offset);
+  const baseScale = 1 - distance * 0.06;
+  const hidden = distance > 3;
 
   return (
-    <article
+    <motion.article
       className={`card ${isActive ? 'card-active' : ''}`}
-      style={style}
+      // entrada: sobe e aparece
+      initial={{ opacity: 0, y: 60 }}
+      animate={{
+        x: `${offset * 70}%`,
+        y: 0,
+        z: -distance * 80,
+        rotateY: offset * -18,
+        scale: baseScale,
+        opacity: hidden ? 0 : 1 - distance * 0.18,
+      }}
+      transition={{ type: 'spring', stiffness: 120, damping: 20, mass: 0.9 }}
+      // cards laterais "respondem" ao hover
+      whileHover={!isActive ? { scale: baseScale + 0.03 } : undefined}
+      style={{ zIndex: 10 - distance, pointerEvents: hidden ? 'none' : 'auto' }}
       onClick={() => !isActive && onSelect()}
     >
       <div className="card-top">
@@ -47,8 +50,14 @@ export default function Card({ card, offset, onSelect }: CardProps) {
           {card.footerLabel && <small>{card.footerLabel.toUpperCase()}</small>}
           {card.footerValue && <strong>{card.footerValue}</strong>}
         </div>
-        <button className="card-btn">{card.action} ↓</button>
+        <motion.button
+          className="card-btn"
+          whileHover={{ scale: 1.06 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {card.action} ↓
+        </motion.button>
       </div>
-    </article>
+    </motion.article>
   );
 }

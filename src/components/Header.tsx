@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import type { Lang } from '../types/Index';
 
 interface HeaderProps {
@@ -9,7 +10,12 @@ const LANGS: Lang[] = ['PTBR', 'EN'];
 
 export default function Header({ lang, setLang }: HeaderProps) {
   return (
-    <header className="header">
+    <motion.header
+      className="header"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div>
         <h1 className="logo">VITOR A. SOUZA</h1>
         <p className="logo-sub">ARCHITECT &amp; CREATIVE TECHNOLOGIST</p>
@@ -29,8 +35,15 @@ export default function Header({ lang, setLang }: HeaderProps) {
             </span>
           ))}
         </div>
-        <button className="avatar-btn" aria-label="Profile">👤</button>
+        <motion.button
+          className="avatar-btn"
+          aria-label="Profile"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.92 }}
+        >
+          👤
+        </motion.button>
       </div>
-    </header>
+    </motion.header>
   );
 }

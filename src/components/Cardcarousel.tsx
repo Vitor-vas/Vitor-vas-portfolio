@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import type { PointerEvent } from 'react';
+import { motion } from 'motion/react';
+import type { PanInfo } from 'motion/react';
 import Card from './Card';
 import type { CardData, SetNumber } from '../types/Index';
 
@@ -9,26 +9,29 @@ interface CardCarouselProps {
   setActive: SetNumber;
 }
 
-export default function CardCarousel({ cards, active, setActive }: CardCarouselProps) {
-  const startX = useRef<number | null>(null);
+const SWIPE_THRESHOLD = 60; // px
+const VELOCITY_THRESHOLD = 400; // px/s
 
+export default function CardCarousel({ cards, active, setActive }: CardCarouselProps) {
   const go = (dir: number) =>
     setActive((i) => Math.min(cards.length - 1, Math.max(0, i + dir)));
 
-  // Arrastar com mouse/touch
-  const onDown = (e: PointerEvent<HTMLElement>) => {
-    startX.current = e.clientX;
-  };
-  const onUp = (e: PointerEvent<HTMLElement>) => {
-    if (startX.current === null) return;
-    const diff = e.clientX - startX.current;
-    if (Math.abs(diff) > 50) go(diff < 0 ? 1 : -1);
-    startX.current = null;
+  // Arrastar: decide pela distância OU pela velocidade do gesto
+  const onDragEnd = (_: PointerEvent | MouseEvent | TouchEvent, info: PanInfo) => {
+    const { offset, velocity } = info;
+    if (offset.x < -SWIPE_THRESHOLD || velocity.x < -VELOCITY_THRESHOLD) go(1);
+    else if (offset.x > SWIPE_THRESHOLD || velocity.x > VELOCITY_THRESHOLD) go(-1);
   };
 
   return (
-    <section className="carousel" onPointerDown={onDown} onPointerUp={onUp}>
-      <div className="carousel-stage">
+    <section className="carousel">
+      <motion.div
+        className="carousel-stage"
+        drag="x"
+        dragSnapToOrigin // o palco volta ao lugar; só o índice muda
+        dragElastic={0.15}
+        onDragEnd={onDragEnd}
+      >
         {cards.map((card, i) => (
           <Card
             key={card.id}
@@ -37,7 +40,7 @@ export default function CardCarousel({ cards, active, setActive }: CardCarouselP
             onSelect={() => setActive(i)}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
