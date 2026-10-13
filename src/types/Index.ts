@@ -24,3 +24,16 @@ export type Lang = 'PTBR' | 'EN';
 export type SetNumber = Dispatch<SetStateAction<number>>;
 
 export type SendStatus = 'idle' | 'sending' | 'success' | 'error';
+
+
+export interface Project {
+  id: string;
+  tag: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  stack: string[];
+  repo?: string;
+  demo?: string;
+  image?: string; // URL or imported asset, shown on the right side of the selected card
+}

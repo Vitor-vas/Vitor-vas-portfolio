@@ -1,0 +1,85 @@
+/* Projects – carousel of cards; the selected one becomes a landscape card in the center */
+.projects-stage {
+  position: relative;
+  flex: 1;
+  min-height: 700px;
+  overflow: hidden;      /* outer cards get cropped at the bottom, like in the mockup */
+  touch-action: pan-y;   /* horizontal swipes move the carousel, vertical ones still scroll */
+  user-select: none;
+}
+
+.projects-controls { position: absolute; top: 28px; left: 0; right: 0; z-index: 40; display: flex; justify-content: center; }
+
+.projects-hint {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .25em;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* Cards sit at the center of the stage; Motion sets width, height and margins
+   (-width/2, -height/2) so they stay centered while changing shape. */
+.proj-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;  /* FAN_W */
+  height: 420px; /* FAN_H */
+  margin: -210px 0 0 -140px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--card-text);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.proj-card:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 4px; }
+.proj-card.is-selected { cursor: default; box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55); }
+
+/* Both layers are pinned to the top-left with FIXED sizes, so their content
+   never re-wraps while the card is growing or shrinking. */
+.proj-layer { position: absolute; top: 0; left: 0; }
+.proj-fan { width: 280px; height: 420px; padding: 26px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+.proj-sel { padding: 32px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; }
+.proj-sel.compact { grid-template-columns: 1fr; grid-template-rows: 150px 1fr; padding: 22px; gap: 18px; }
+.proj-sel.compact .proj-image { order: -1; }
+
+.proj-top { display: flex; justify-content: space-between; align-items: center; min-height: 26px; }
+.proj-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .15em; color: #6a5acd; }
+.proj-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.proj-close { width: 26px; height: 26px; border-radius: 50%; background: rgba(26, 21, 48, 0.08); color: var(--card-text); font-size: 12px; }
+.proj-close:hover { background: rgba(26, 21, 48, 0.16); }
+
+.proj-body { flex: 1; padding-top: 18px; }
+.proj-title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 36px; line-height: 1.05; }
+.proj-subtitle { margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: var(--accent); }
+.proj-footer { padding-top: 14px; border-top: 1px solid rgba(26, 21, 48, 0.12); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .12em; color: #8a86a3; }
+
+/* Landscape layout */
+.proj-sel-text { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.proj-sel-text .proj-title { margin-top: 14px; font-size: 34px; }
+.proj-desc { margin-top: 14px; font-size: 14px; line-height: 1.6; color: #3a3552; }
+.proj-stack { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.proj-stack li { padding: 4px 10px; border-radius: 6px; background: rgba(124, 92, 255, 0.12); color: #4b3bb0; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+.proj-links { display: flex; gap: 10px; margin-top: auto; padding-top: 16px; }
+.proj-links a { padding: 8px 14px; border-radius: 8px; background: var(--card-text); color: #fff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .12em; }
+.proj-links a:hover { background: var(--accent); }
+
+/* Image slot on the right side of the selected card */
+.proj-image { border-radius: 14px; overflow: hidden; min-height: 0; background: linear-gradient(135deg, #ece9ff, #c9c2ff); display: flex; align-items: center; justify-content: center; }
+.proj-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-image span { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .25em; color: #7a6fc9; }
+
+/* Side cards: text sticks to the outer edge so the center card doesn't cover it */
+.side-left .proj-body, .side-left .proj-footer { text-align: left; }
+.side-right .proj-top { justify-content: flex-end; }
+.side-right .proj-body, .side-right .proj-footer { text-align: right; }
+
+@media (max-width: 720px) {
+  .projects-stage { min-height: 660px; }
+}
