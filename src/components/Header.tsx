@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link, NavLink } from 'react-router-dom';
 import type { Lang } from '../types/Index';
 
 interface HeaderProps {
@@ -8,6 +9,14 @@ interface HeaderProps {
 
 const LANGS: Lang[] = ['PTBR', 'EN'];
 
+const NAV = [
+  { to: '/about', label: 'About' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/experience', label: 'Experience' },
+  { to: '/curriculum', label: 'CV' },
+  { to: '/contact', label: 'Contact' },
+];
+
 export default function Header({ lang, setLang }: HeaderProps) {
   return (
     <motion.header
@@ -16,10 +25,14 @@ export default function Header({ lang, setLang }: HeaderProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div>
+      <Link to="/" className="logo-link">
         <h1 className="logo">VITOR A. SOUZA</h1>
         <p className="logo-sub">ARCHITECT &amp; CREATIVE TECHNOLOGIST</p>
-      </div>
+      </Link>
+
+      <nav className="nav">
+        {NAV.map((n) => (<NavLink key={n.to} to={n.to} className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>{n.label}</NavLink>))}
+      </nav>
 
       <div className="header-right">
         <div className="lang">

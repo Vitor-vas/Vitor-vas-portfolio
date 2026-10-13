@@ -10,6 +10,7 @@ export interface CardData {
   footerLabel?: string;
   footerValue?: string;
   action: string;
+  path: string;
 }
 
 export interface SocialLink {

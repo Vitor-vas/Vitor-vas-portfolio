@@ -7,12 +7,13 @@ interface CardCarouselProps {
   cards: CardData[];
   active: number;
   setActive: SetNumber;
+  onOpen: (card: CardData) => void;
 }
 
 const SWIPE_THRESHOLD = 60; // px
 const VELOCITY_THRESHOLD = 400; // px/s
 
-export default function CardCarousel({ cards, active, setActive }: CardCarouselProps) {
+export default function CardCarousel({ cards, active, setActive, onOpen }: CardCarouselProps) {
   const go = (dir: number) =>
     setActive((i) => Math.min(cards.length - 1, Math.max(0, i + dir)));
 
@@ -38,6 +39,7 @@ export default function CardCarousel({ cards, active, setActive }: CardCarouselP
             card={card}
             offset={i - active}
             onSelect={() => setActive(i)}
+            onOpen={() => onOpen(card)}
           />
         ))}
       </motion.div>

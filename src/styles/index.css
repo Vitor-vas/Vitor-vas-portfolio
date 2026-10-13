@@ -92,3 +92,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .footer-links a { color: var(--muted); text-decoration: none; letter-spacing: .15em; }
 .footer-links a:hover { color: #fff; }
 .footer-bottom { font-size: 10px; letter-spacing: .1em; }
+/* Routing / pages */
+.page-content { flex: 1; display: flex; flex-direction: column; }
+.logo-link { color: inherit; text-decoration: none; }
+.nav { display: flex; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
+.nav-link { color: var(--muted); text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.nav-link:hover { color: #fff; }
+.nav-link.active { color: #fff; border-bottom-color: var(--accent-soft); }
+.page { padding: 64px 12px; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 56px; margin: 24px 0 16px; }
+.page-text { color: var(--muted); max-width: 60ch; }
+.back-link { color: var(--muted); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .2em; }
+.back-link:hover { color: #fff; }

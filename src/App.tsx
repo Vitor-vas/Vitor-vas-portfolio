@@ -1,27 +1,33 @@
-import { useState } from 'react';
-import { MotionConfig } from 'motion/react';
-import Header from './components/Header.tsx';
-import StatusBar from './components/Statusbar.tsx';
-import CardCarousel from './components/Cardcarousel.tsx';
-import CarouselControls from './components/Carouselcontrols.tsx';
-import Footer from './components/Footer.tsx';
-import { cards } from './data/cards.ts';
-import type { Lang } from './types/Index.ts';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Layout from './components/Layout.tsx';
+
+import Home from './pages/Home.tsx';
+import Aboutme from './pages/Aboutme.tsx';
+import Projects from './pages/Projects.tsx';
+import Experiences from './pages/Experiences.tsx';
+import Curriculum from './pages/Curriculum.tsx';
+import Contact from './pages/Contact.tsx';
+import NotFound from './pages/NotFound.tsx';
+
 import './styles/index.css';
 
 export default function App() {
-  const [lang, setLang] = useState<Lang>('EN');
-  const [active, setActive] = useState(0);
- 
   return (
-    <MotionConfig reducedMotion="user">
-      <div className="app">
-      <Header lang={lang} setLang={setLang} />
-      <StatusBar />
-      <CardCarousel cards={cards} active={active} setActive={setActive} />
-      <CarouselControls total={cards.length} active={active} setActive={setActive} />
-      <Footer />
-      </div>
-    </MotionConfig>
+    <BrowserRouter>
+      <Routes>
+        {/* Layout route: Header, StatusBar and Footer stay mounted,
+            only the <Outlet /> inside Layout changes between pages. */}
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<Aboutme />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="experience" element={<Experiences />} />
+          <Route path="curriculum" element={<Curriculum />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

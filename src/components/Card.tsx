@@ -29,6 +29,7 @@ interface CardPose {
 interface CardProps {
   card: CardData;
   offset: number; // 0 = center, negative = left, positive = right
+  onOpen: () => void; // called when the button of the CENTER card is clicked
   onSelect: () => void; // `() => void` = a function that takes no arguments and returns nothing
 }
 
@@ -64,7 +65,7 @@ function getCardPose(offset: number): CardPose {
   };
 }
 
-export default function Card({ card, offset, onSelect }: CardProps) {
+export default function Card({ card, offset, onSelect, onOpen }: CardProps) {
   const isActive = offset === 0;
   const pose = getCardPose(offset);
 
@@ -133,6 +134,7 @@ export default function Card({ card, offset, onSelect }: CardProps) {
             className="card-btn"
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
+            onClick={onOpen}
           >
             {card.action} ↓
           </motion.button>
