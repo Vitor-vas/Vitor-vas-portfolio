@@ -36,17 +36,32 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Carousel */
 .carousel { flex: 1; display: flex; align-items: center; justify-content: center; perspective: 1400px; min-height: 600px; user-select: none; touch-action: pan-y; }
 .carousel-stage { position: relative; width: 380px; height: 540px; transform-style: preserve-3d; }
-.card {
+/* The card is only a 3D container: it holds a front face and a back face.
+   preserve-3d lets the faces keep their own 3D position; never put opacity/filter on this element. */
+.card { position: absolute; inset: 0; transform-style: preserve-3d; cursor: pointer; }
+.card-active { cursor: default; }
+
+/* Both faces sit on top of each other; backface-visibility hides whichever one faces away */
+.card-face {
   position: absolute; inset: 0;
+  border-radius: 24px; overflow: hidden;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.card-front {
   display: flex; flex-direction: column; justify-content: space-between;
   padding: 28px 36px;
-  background: rgba(255,255,255,.85); color: var(--card-text);
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
-  transition: transform .6s cubic-bezier(.22,1,.36,1), opacity .6s;
-  cursor: pointer;
+  background: var(--card); color: var(--card-text);
 }
-.card-active { background: var(--card); cursor: default; }
+/* The back is pre-rotated 180deg so it reads correctly once the whole card is flipped */
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #1a1530; background-size: cover; background-position: center;
+}
+/* Shading toward the inner edge of the wings (opacity is animated by Motion) */
+.card-shade { position: absolute; inset: 0; pointer-events: none; }
+.shade-front { background: linear-gradient(to right, transparent 35%, rgba(26, 21, 48, .45)); }
+.shade-back  { background: linear-gradient(to left,  transparent 35%, rgba(26, 21, 48, .45)); }
 .card-tag { font-size: 11px; letter-spacing: .2em; font-weight: 700; }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; margin-right: 6px; }
 .card-body { text-align: center; }
@@ -62,7 +77,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Controls */
 .controls-wrap { text-align: center; margin-bottom: 32px; }
 .controls { display: inline-flex; align-items: center; gap: 24px; padding: 14px 32px; border: 1px solid rgba(255,255,255,.1); border-radius: 999px; }
-.pager { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); }
+.pager { position: relative; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); }
+.pager-dot { position: absolute; left: 0; right: 0; bottom: -8px; margin: 0 auto; width: 4px; height: 4px; border-radius: 50%; background: var(--accent-soft); }
 .pager.active { color: #fff; font-weight: 700; }
 .hint { margin-top: 16px; font-size: 10px; letter-spacing: .25em; color: var(--muted); }
 

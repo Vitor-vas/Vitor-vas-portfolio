@@ -48,6 +48,6 @@ export const competencies: string[] = ['System Design', 'Next.js Full-Stack', 'P
 
 export const links: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/Vitor-vas' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Email', href: 'mailto:you@email.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vitorasouza/' },
+  { label: 'Email', href: 'mailto:vitoraugustosouzas007@gmail.com' },
 ];
