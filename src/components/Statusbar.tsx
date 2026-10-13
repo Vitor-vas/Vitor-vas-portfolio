@@ -23,9 +23,9 @@ export default function StatusBar() {
     >
       <span>BELO HORIZONTE, MG <em>/ UTC-03 {clock}</em></span>
       <span>
-        <b>ARCHIVE VOL. 24</b> · FOLIO DOSSIER
+        <b>PORTFOLIO V1.0</b> · DECK OF ME
       </span>
-      <span>STATUS: <b>AVAILABLE</b></span>
+      <span>STATUS: <b>AVAILABLE FOR HIRING</b></span>
     </motion.div>
   );
 }

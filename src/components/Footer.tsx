@@ -11,7 +11,7 @@ export default function Footer() {
     >
       <div className="footer-row">
         <div className="chips">
-          <span className="chips-label">CORE COMPETENCIES:</span>
+          <span className="chips-label">DESIRED ROLES:</span>
           {competencies.map((c) => (
             <span key={c} className="chip">{c}</span>
           ))}
@@ -26,7 +26,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-row footer-bottom">
-        <span>● AVAILABLE FOR COMMISSIONS</span>
+        <span>● AVAILABLE FOR HIRING</span>
         <span>© Vitor A. Souza — All Rights Reserved</span>
       </div>
     </motion.footer>

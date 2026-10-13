@@ -51,9 +51,8 @@ export const cards: CardData[] = [
 ];
 
 export const competencies: string[] = [
-  'System Design',
-  'React Full-Stack',
-  'PostgreSQL',
+  'SOFTWARE ENGINEER',
+  'Full-Stack DEVELOPER',
 ];
 
 export const links: SocialLink[] = [

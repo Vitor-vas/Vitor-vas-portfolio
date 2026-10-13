@@ -27,7 +27,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
     >
       <Link to="/" className="logo-link">
         <h1 className="logo">VITOR A. SOUZA</h1>
-        <p className="logo-sub">ARCHITECT &amp; CREATIVE TECHNOLOGIST</p>
+        <p className="logo-sub">SOFTWARE ENGINEER &amp; CREATIVE DEVELOPER</p>
       </Link>
 
       <nav className="nav">
@@ -48,14 +48,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
             </span>
           ))}
         </div>
-        <motion.button
-          className="avatar-btn"
-          aria-label="Profile"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.92 }}
-        >
-          👤
-        </motion.button>
+
       </div>
     </motion.header>
   );
