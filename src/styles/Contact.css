@@ -1,0 +1,87 @@
+/* Contact page – "Direct Dispatch" card */
+.contact-card {
+  --c-lavender: #d4c1ff;
+  --c-lavender-ink: #3a0f9e;
+  --c-field: #0f0e14;
+  --c-border: rgba(255, 255, 255, 0.08);
+  --c-error: #ff8a8a;
+
+  width: 100%;
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 44px 48px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, #26242d, #1c1b22);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.contact-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.contact-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .15em; color: var(--c-lavender); }
+.contact-tag .dot { width: 10px; height: 10px; border-radius: 50%; background: #8a7bb5; display: inline-block; }
+.contact-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.06); color: #b7b4c4; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+
+.contact-title { font-size: 28px; font-weight: 600; letter-spacing: -.01em; }
+.contact-sub { margin: 6px 0 28px; color: #b7b4c4; font-size: 14px; }
+
+.contact-form { display: flex; flex-direction: column; gap: 22px; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; flex: 1; }
+.field-row { display: flex; gap: 18px; }
+.field-label-row { display: flex; justify-content: space-between; align-items: center; }
+.field-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .1em; font-weight: 600; color: #e1dff0; }
+.field-label b { color: var(--c-lavender); font-weight: 600; margin-left: 2px; }
+.counter-mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9a97ad; }
+
+.input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: var(--c-field);
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.input::placeholder { color: #55526a; }
+.input:focus { outline: none; border-color: var(--c-lavender); box-shadow: 0 0 0 3px rgba(212, 193, 255, 0.15); }
+.input.invalid { border-color: var(--c-error); }
+.textarea { resize: vertical; min-height: 160px; line-height: 1.5; }
+
+.field-error { overflow: hidden; font-size: 13px; color: var(--c-error); }
+
+/* Inquiry selector */
+.inquiry-group { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.inquiry { position: relative; padding: 12px 8px; border-radius: 10px; background: #2c2b33; color: #e1dff0; font-size: 14px; font-weight: 500; transition: background .2s; }
+.inquiry:hover { background: #35343e; }
+.inquiry.active { background: transparent; color: var(--c-lavender-ink); }
+.inquiry-pill { position: absolute; inset: 0; border-radius: 10px; background: var(--c-lavender); }
+.inquiry-text { position: relative; z-index: 1; }
+
+/* Footer row */
+.contact-actions { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 4px; }
+.contact-note { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #b7b4c4; }
+.contact-actions-right { display: flex; align-items: center; gap: 14px; }
+.shortcut { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8f8ca3; }
+.send-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 26px; border-radius: 12px;
+  background: var(--c-lavender); color: var(--c-lavender-ink);
+  font-size: 16px; font-weight: 600;
+  box-shadow: 0 0 28px rgba(212, 193, 255, 0.35);
+}
+.send-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.feedback { font-size: 14px; }
+.feedback.success { color: #86efac; }
+.feedback.error { color: var(--c-error); }
+
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+@media (max-width: 720px) {
+  .contact-card { padding: 28px 20px; margin: 24px auto; }
+  .field-row { flex-direction: column; }
+  .inquiry-group { grid-template-columns: repeat(2, 1fr); }
+  .contact-actions { flex-direction: column; align-items: stretch; }
+  .contact-actions-right { justify-content: space-between; }
+}

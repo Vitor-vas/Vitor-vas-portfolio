@@ -22,3 +22,5 @@ export type Lang = 'PTBR' | 'EN';
 
 // Tipo do setter retornado pelo useState<number>
 export type SetNumber = Dispatch<SetStateAction<number>>;
+
+export type SendStatus = 'idle' | 'sending' | 'success' | 'error';
