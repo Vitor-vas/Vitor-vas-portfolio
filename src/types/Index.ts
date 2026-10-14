@@ -37,3 +37,22 @@ export interface Project {
   demo?: string;
   image?: string; // path written in projects.ts, shown on the right side of the selected card
 }
+
+
+// One text per language, e.g. { EN: 'Hello', PTBR: 'Olá' }
+export type Localized<T> = Record<Lang, T>;
+
+export interface Experience {
+  id: string;
+  role: Localized<string>;
+  company: string;
+  companyUrl?: string;
+  type: Localized<string>;
+  summary: Localized<string>;
+  start: string;            // 'YYYY-MM'
+  end?: string;             // 'YYYY-MM'; leave out for "present"
+  location: Localized<string>;
+  description: Localized<string>;
+  highlights: Localized<string[]>;
+  stack: string[];
+}
