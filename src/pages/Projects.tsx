@@ -3,6 +3,7 @@ import { AnimatePresence, motion, type PanInfo, type Variants } from 'motion/rea
 
 import CarouselControls from '../components/Carouselcontrols.tsx';
 import { projects } from '../data/projects.ts';
+import { resolveProjectImage } from '../utils/Projectimage.ts';
 import type { Project } from '../types/Index.ts';
 import '../styles/projects.css';
 
@@ -13,11 +14,11 @@ const FAN_W = 280;
 const FAN_H = 420;
 const PIVOT_DISTANCE = 700;                // px below the card where the fan "hinge" sits
 const ORIGIN_Y = `${FAN_H / 2 + PIVOT_DISTANCE}px`; // px (not %), so it doesn't change when the card is resized
-const FAN_Y = 140;                         // px the fan sits below the center of the stage
+const FAN_Y = 110;                         // px the fan sits below the center of the stage
 const STEP = 16;                           // degrees between neighbouring cards
 const VISIBLE = 2;                         // how many cards are visible on each side of the center
 
-const SELECTED_MAX_W = 680;                // selected card (landscape, image on the right)
+const SELECTED_MAX_W = 820;                // selected card (landscape, 16:9 image on the right)
 const SELECTED_H = 380;
 const SELECTED_H_COMPACT = 520;            // on small screens the image goes on top of the text
 
@@ -102,6 +103,8 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
   // Cards on the right are covered on their left side by the center card,
   // so their text sticks to the right (and vice versa) to stay readable.
   const side = offset === 0 ? 'center' : offset < 0 ? 'left' : 'right';
+  // `project.image` is the path written in data/projects.ts
+  const imageUrl = resolveProjectImage(project.image);
 
   return (
     <motion.article
@@ -192,8 +195,8 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
 
         {/* Image slot: shows project.image, or a placeholder until you add one */}
         <div className="proj-image">
-          {project.image ? (
-            <img src={project.image} alt={`${project.title} preview`} draggable={false} />
+          {imageUrl ? (
+            <img src={imageUrl} alt={`${project.title} preview`} draggable={false} />
           ) : (
             <span>IMAGE</span>
           )}
@@ -254,9 +257,42 @@ export default function Projects() {
   };
 
   return (
-    // Clicking the empty stage while a project is open brings the carousel back
-    <motion.section className="projects-stage" onPanEnd={onPanEnd} onClick={open ? close : undefined}>
-      {/* Carousel controls (hidden while a project is open) */}
+    <div className="projects-page">
+      {/* Clicking the empty stage while a project is open brings the carousel back */}
+      <motion.section className="projects-stage" onPanEnd={onPanEnd} onClick={open ? close : undefined}>
+        <AnimatePresence>
+          {open && (
+            <motion.p
+              className="projects-hint"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              ESC OR CLICK OUTSIDE TO GO BACK
+            </motion.p>
+          )}
+        </AnimatePresence>
+
+        {projects.map((project, i) => {
+          const state: CardState = !open ? 'fan' : i === active ? 'selected' : 'hidden';
+
+          return (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              offset={i - active}
+              state={state}
+              variants={variants}
+              selected={selected}
+              compact={compact}
+              onClick={() => handleCardClick(i)}
+              onClose={close}
+            />
+          );
+        })}
+      </motion.section>
+
+      {/* Carousel controls: right under the cards (faded out while a project is open) */}
       <motion.div
         className="projects-controls"
         animate={{ opacity: open ? 0 : 1 }}
@@ -264,37 +300,6 @@ export default function Projects() {
       >
         <CarouselControls total={total} active={active} setActive={setActive} />
       </motion.div>
-
-      <AnimatePresence>
-        {open && (
-          <motion.p
-            className="projects-hint"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            ESC OR CLICK OUTSIDE TO GO BACK
-          </motion.p>
-        )}
-      </AnimatePresence>
-
-      {projects.map((project, i) => {
-        const state: CardState = !open ? 'fan' : i === active ? 'selected' : 'hidden';
-
-        return (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            offset={i - active}
-            state={state}
-            variants={variants}
-            selected={selected}
-            compact={compact}
-            onClick={() => handleCardClick(i)}
-            onClose={close}
-          />
-        );
-      })}
-    </motion.section>
+    </div>
   );
 }

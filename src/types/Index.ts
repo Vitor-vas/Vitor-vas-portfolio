@@ -35,5 +35,5 @@ export interface Project {
   stack: string[];
   repo?: string;
   demo?: string;
-  image?: string; // URL or imported asset, shown on the right side of the selected card
+  image?: string; // path written in projects.ts, shown on the right side of the selected card
 }

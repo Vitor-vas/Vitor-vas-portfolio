@@ -1,56 +1,45 @@
 import type { Project } from '../types/Index';
 
-// PLACEHOLDERS: replace these with your real projects.
-// Add or remove items freely, the carousel adapts to the number of projects.
-//
-// To show an image on the selected card, put the file in src/assets/projects/
-// and import it:
-//   import shot1 from '../assets/projects/project-1.png';
-// then add `image: shot1` to the project. Without `image`, a placeholder is shown.
+// Projects made by me no need to change id nor tag
 export const projects: Project[] = [
   {
     id: 'project-1',
     tag: '01 // PROJECT',
-    title: 'Project One',
-    subtitle: 'Full-Stack Web App',
-    description: 'Short description of what this project does and the problem it solves.',
-    stack: ['React', 'TypeScript', 'PostgreSQL'],
-    repo: 'https://github.com/Vitor-vas',
+    title: 'Psyche',
+    subtitle: 'Psychologist-Pacient management system',
+    description: 'System that connects psychologists and their pacients, with dashboard. Puc 1st semester.',
+    stack: ['JavaScript', 'JSONServer', 'HTML', 'CSS'],
+    repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2',
+    image: 'InnertripDashboard.jpeg',
   },
   {
     id: 'project-2',
     tag: '02 // PROJECT',
-    title: 'Project Two',
-    subtitle: 'Distributed Service',
-    description: 'Short description of what this project does and the problem it solves.',
-    stack: ['Java', 'REST', 'Docker'],
-    repo: 'https://github.com/Vitor-vas',
+    title: 'Collect Game',
+    subtitle: 'Python dungeon crawler',
+    description: 'Short dungeon crawler game made with python.',
+    stack: ['Python', 'Pygame', 'Pytest'],
+    repo: 'https://github.com/Vitor-vas/CollectGame_Python',
+    image: 'CollectGame.jpg',
   },
   {
     id: 'project-3',
     tag: '03 // PROJECT',
-    title: 'Project Three',
-    subtitle: 'Interactive UI',
-    description: 'Short description of what this project does and the problem it solves.',
-    stack: ['React', 'Motion', 'CSS'],
-    repo: 'https://github.com/Vitor-vas',
+    title: 'Portoes do Ceu',
+    subtitle: 'Hospital management system',
+    description: 'System that manages a hospital and its workers, with dashboard. Puc 2st semester. Ongoing',
+    stack: ['Thymeleaf', 'Java', 'Springboot'],
+    repo: 'https://github.com/leopettersen/TP-sistema-hospitalar',
+    image: 'PortoesDoCeu.jpg',
   },
   {
     id: 'project-4',
     tag: '04 // PROJECT',
-    title: 'Project Four',
-    subtitle: 'Automation / Data',
-    description: 'Short description of what this project does and the problem it solves.',
-    stack: ['Python', 'SQL'],
-    repo: 'https://github.com/Vitor-vas',
-  },
-  {
-    id: 'project-5',
-    tag: '05 // PROJECT',
-    title: 'Project Five',
-    subtitle: 'Academic Project',
-    description: 'Short description of what this project does and the problem it solves.',
-    stack: ['Java', 'System Design'],
-    repo: 'https://github.com/Vitor-vas',
+    title: 'Athenas',
+    subtitle: 'Universisties information distribution',
+    description: 'System that connects workers and graduates with to be students to share information about a broad range of courses. Puc 2st semester. Ongoing.',
+    stack: ['React', 'Typescript'],
+    repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-2-ti2-8243100-atenas/',
+    image: 'Athenas.jpg', 
   },
 ];

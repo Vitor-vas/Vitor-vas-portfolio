@@ -1,14 +1,17 @@
 /* Projects – carousel of cards; the selected one becomes a landscape card in the center */
+.projects-page { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
 .projects-stage {
   position: relative;
-  flex: 1;
-  min-height: 700px;
+  flex: none;
+  height: 640px;
   overflow: hidden;      /* outer cards get cropped at the bottom, like in the mockup */
   touch-action: pan-y;   /* horizontal swipes move the carousel, vertical ones still scroll */
   user-select: none;
 }
 
-.projects-controls { position: absolute; top: 28px; left: 0; right: 0; z-index: 40; display: flex; justify-content: center; }
+/* Controls sit right under the cards */
+.projects-controls { display: flex; justify-content: center; padding-top: 12px; }
 
 .projects-hint {
   position: absolute;
@@ -45,8 +48,8 @@
    never re-wraps while the card is growing or shrinking. */
 .proj-layer { position: absolute; top: 0; left: 0; }
 .proj-fan { width: 280px; height: 420px; padding: 26px 24px; display: flex; flex-direction: column; justify-content: space-between; }
-.proj-sel { padding: 32px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; }
-.proj-sel.compact { grid-template-columns: 1fr; grid-template-rows: 150px 1fr; padding: 22px; gap: 18px; }
+.proj-sel { padding: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; }
+.proj-sel.compact { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; padding: 22px; gap: 18px; }
 .proj-sel.compact .proj-image { order: -1; }
 
 .proj-top { display: flex; justify-content: space-between; align-items: center; min-height: 26px; }
@@ -71,15 +74,24 @@
 .proj-links a:hover { background: var(--accent); }
 
 /* Image slot on the right side of the selected card */
-.proj-image { border-radius: 14px; overflow: hidden; min-height: 0; background: linear-gradient(135deg, #ece9ff, #c9c2ff); display: flex; align-items: center; justify-content: center; }
-.proj-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-image {
+  aspect-ratio: 16 / 9;          /* desktop screenshots: the slot has the same shape */
+  align-self: center;            /* vertically centered next to the text */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ece9ff, #c9c2ff);
+  box-shadow: 0 8px 24px rgba(26, 21, 48, 0.18), 0 0 0 1px rgba(26, 21, 48, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* contain = the whole screenshot is always visible, never cropped
+   (use `cover` instead if you prefer it to fill the slot completely) */
+.proj-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .proj-image span { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .25em; color: #7a6fc9; }
 
 /* Side cards: text sticks to the outer edge so the center card doesn't cover it */
 .side-left .proj-body, .side-left .proj-footer { text-align: left; }
 .side-right .proj-top { justify-content: flex-end; }
 .side-right .proj-body, .side-right .proj-footer { text-align: right; }
-
-@media (max-width: 720px) {
-  .projects-stage { min-height: 660px; }
-}
