@@ -50,13 +50,17 @@
 
 .field-error { overflow: hidden; font-size: 13px; color: var(--c-error); }
 
-/* Inquiry selector */
-.inquiry-group { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.inquiry { position: relative; padding: 12px 8px; border-radius: 10px; background: #2c2b33; color: #e1dff0; font-size: 14px; font-weight: 500; transition: background .2s; }
-.inquiry:hover { background: #35343e; }
-.inquiry.active { background: transparent; color: var(--c-lavender-ink); }
-.inquiry-pill { position: absolute; inset: 0; border-radius: 10px; background: var(--c-lavender); }
-.inquiry-text { position: relative; z-index: 1; }
+/* Social link buttons */
+.social-group { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.social-link {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 12px 8px; border-radius: 10px;
+  background: #2c2b33; color: #e1dff0;
+  font-size: 14px; font-weight: 500; text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.social-link:hover { background: var(--c-lavender); color: var(--c-lavender-ink); }
+.social-link:focus-visible { outline: 2px solid var(--c-lavender); outline-offset: 2px; }
 
 /* Footer row */
 .contact-actions { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 4px; }
@@ -81,7 +85,7 @@
 @media (max-width: 720px) {
   .contact-card { padding: 28px 20px; margin: 24px auto; }
   .field-row { flex-direction: column; }
-  .inquiry-group { grid-template-columns: repeat(2, 1fr); }
+  .social-group { grid-template-columns: repeat(2, 1fr); }
   .contact-actions { flex-direction: column; align-items: stretch; }
   .contact-actions-right { justify-content: space-between; }
 }

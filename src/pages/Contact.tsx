@@ -1,18 +1,15 @@
 import { useRef, useState, type FormEvent, type KeyboardEvent } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import emailjs from '@emailjs/browser';
-import { Link } from 'react-router-dom';
 
+import { contactLinks } from '../data/social.ts';
 import type { SendStatus } from '../types/Index.ts';
-import '../styles/Contact.css';
+import '../styles/contact.css';
 
 // Values come from the .env file (see .env.example). Vite only exposes variables prefixed with VITE_.
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
-
-const INQUIRIES = ['Internship', 'Contract', 'Architecture', 'Say Hello'] as const;
-type Inquiry = (typeof INQUIRIES)[number];
 
 const MAX_MESSAGE = 1200;
 const MIN_MESSAGE = 10;
@@ -47,7 +44,6 @@ const isMac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigat
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [inquiry, setInquiry] = useState<Inquiry>('Internship');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -105,10 +101,9 @@ export default function Contact() {
         serviceId,
         templateId,
         {
-          inquiry,
           name: name.trim(),
           email: email.trim(),
-          subject: subject.trim() || `${inquiry} inquiry`,
+          subject: subject.trim() || 'Portfolio contact',
           message: message.trim(),
         },
         { publicKey },
@@ -137,7 +132,6 @@ export default function Contact() {
   const sending = status === 'sending';
 
   return (
-    
     <motion.section
       className="contact-card"
       initial={{ opacity: 0, y: 20 }}
@@ -148,9 +142,7 @@ export default function Contact() {
         <span className="contact-tag">
           <i className="dot" /> DIRECT DISPATCH
         </span>
-        <span className="contact-badge">
-          <LockIcon /> TLS Encrypted
-        </span>
+
       </div>
 
       <h2 className="contact-title">Send a Message</h2>
@@ -159,34 +151,24 @@ export default function Contact() {
       </p>
 
       <form ref={formRef} onSubmit={handleSubmit} noValidate className="contact-form">
-        {/* ---------- Inquiry type ---------- */}
+        {/* ---------- Social links ---------- */}
         <div className="field">
-          <span className="field-label" id="inquiry-label">INQUIRY TYPE</span>
-          <div className="inquiry-group" role="radiogroup" aria-labelledby="inquiry-label">
-            {INQUIRIES.map((item) => {
-              const selected = inquiry === item;
-              return (
-                <button
-                  key={item}
-                  type="button"
-                  role="radio"
-                  aria-checked={selected}
-                  className={selected ? 'inquiry active' : 'inquiry'}
-                  onClick={() => setInquiry(item)}
-                >
-                  {/* The lavender pill slides between options thanks to layoutId */}
-                  {selected && (
-                    <motion.span
-                      layoutId="inquiry-pill"
-                      className="inquiry-pill"
-                      transition={{ type: 'spring', stiffness: 400, damping: 32 }}
-                    />
-                  )}
-                  <span className="inquiry-text">{item}</span>
-                </button>
-              );
-            })}
-          </div>
+          <span className="field-label" id="social-label">FIND ME ON</span>
+          <nav className="social-group" aria-labelledby="social-label">
+            {contactLinks.map((link) => (
+              <motion.a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.96 }}
+              >
+                {link.label} <span aria-hidden="true">↗</span>
+              </motion.a>
+            ))}
+          </nav>
         </div>
 
         {/* ---------- Name + Email ---------- */}
