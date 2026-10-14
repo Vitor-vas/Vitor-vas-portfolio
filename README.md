@@ -518,43 +518,6 @@ Descreva o propósito das pastas principais.
 
 ---
 
-## 🎥 Demonstração
-
-Use GIFs e prints para mostrar o projeto em ação.  
-
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
-
-### 📱 Versão Mobile (Responsiva)
-
-- GIF de demonstração (exemplo de navegação no celular):  
-
-| Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
-|----------------|----------------|----------------|----------------|
-| _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Sobre mim** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Projetos** | **Contato** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-
-### 🌐 Aplicação Web
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Sobre mim** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Projetos** | **Projeto Selecionado** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Experiência** | **Contato** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-
 ### 💻 Exemplo de Saída no Terminal (para Build e Servidor de Desenvolvimento)
 
 Como o projeto não possui back-end, esta seção demonstra a saída esperada dos principais comandos do dia a dia.
