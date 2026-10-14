@@ -24,7 +24,7 @@ const CONTENT: Record<Lang, AboutContent> = {
     subtitle: 'Software Engineer & Full-Stack',
     paragraphs: [
       "I'm Vitor Augusto de Souza, a Software Engineering student at PUC Minas (2nd semester) based in Belo Horizonte, Brazil. I build resilient web architectures, distributed systems and interfaces based on human interactions (HCI).",
-      "I enjoy full-stack work, building systems based on OOP principles and polishing the details of a UI animation. I'm open to internships and freelance jobs.",
+      "I enjoy full-stack work, building systems based on OOP principles and polishing the details of a UI animation. I'm open to internships and freelance jobs, seeking oportunities in such areas.",
     ],
     stack: ['React', 'TypeScript', 'Java', 'Python'],
     footerLabel: 'Institution',
@@ -37,7 +37,7 @@ const CONTENT: Record<Lang, AboutContent> = {
     subtitle: 'Engenheiro de Software & Full-Stack',
     paragraphs: [
       'Sou Vitor Augusto de Souza, estudante de Engenharia de Software na PUC Minas (2º semestre) residente em Belo Horizonte, Brasil. Desenvolvo arquiteturas web resilientes, sistemas distribuídos e interfaces baseadas em interação humano-computador (IHC).',
-      'Gosto de trabalho full-stack, da construção de sistemas baseados nas regras de POO e do refinamento dos detalhes de animações de UI. Estou aberto a oportunidades de estágio e trabalhos como freelancer.',
+      'Gosto de trabalho full-stack, da construção de sistemas baseados nas regras de POO e do refinamento dos detalhes de animações de UI. Estou aberto a oportunidades de estágio e trabalhos como freelancer. Procurando oportunidades nessas áreas',
     ],
     stack: ['React', 'TypeScript', 'Java', 'Python'],
     footerLabel: 'Instituição',
