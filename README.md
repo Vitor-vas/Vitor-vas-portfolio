@@ -1,23 +1,22 @@
-<!-- Este template foi criado para servir como referência e pode ser facilmente adaptado para diferentes projetos de desenvolvimento -->
+<!-- Este README foi criado a partir do template de documentação do Prof. Dr. João Paulo Aramuni e adaptado ao projeto Portfolio Profissional -->
 
 ---
 
 # 🏷️ Vítor Souza | Portfolio Profissional 👨‍💻
 
 > [!NOTE]
-> Breve descrição do projeto. **Foque no principal valor/benefício.**  
-> Crie uma **logo** para o projeto que represente a aplicação em questão.
+> Portfólio interativo em **React** que apresenta **quem eu sou, meus projetos, minha experiência e formas de contato** em um só lugar, com navegação por rotas, animações com **Motion** e suporte a dois idiomas (PT-BR e EN).
 
 <table>
   <tr>
     <td width="800px">
       <div align="justify">
-        Este <b>README.md</b> apresenta um template organizado, ideal para servir como referência acadêmica e profissional em projetos de desenvolvimento, desde trabalhos da faculdade até projetos desenvolvidos para etapas técnicas de processos seletivos. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
+        Este <b>Portfolio Profissional</b> é uma <i>Single Page Application</i> desenvolvida com <b>React, TypeScript e Vite</b>, criada para apresentar o meu perfil como estudante de <b>Engenharia de Software</b> na PUC Minas. A aplicação reúne uma <i>página inicial com carrossel de cards</i>, uma página <i>Sobre mim</i> com card arrastável, uma <i>galeria de projetos em carrossel</i>, uma <i>linha do tempo de experiência</i> e um <i>formulário de contato funcional</i> integrado ao <b>EmailJS</b>. O objetivo é oferecer uma experiência <b>visual, fluida e organizada</b>, facilitando que recrutadores e interessados em <i>estágios</i> e <i>trabalhos como freelancer</i> conheçam meu trabalho e entrem em contato. Todo o conteúdo é <b>orientado a dados</b> (arquivos em <code>src/data</code>), o que torna a atualização de projetos, experiências e links simples e rápida.
       </div>
     </td>
     <td>
       <div>
-        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
+        <img src="./public/favicon.svg" alt="Logo do Projeto" width="120px"/>
       </div>
     </td>
   </tr> 
@@ -29,14 +28,14 @@
 
 ### Exemplos de badges básicos:
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/joaopauloaramuni/joaopauloaramuni/main.yml?branch=main)](https://github.com/joaopauloaramuni/joaopauloaramuni/actions/workflows/main.yml)
-[![Test Coverage](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/branch/main/graph/badge.svg)](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue)](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/releases)
-[![Licença](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)](#licença)
+![Status](https://img.shields.io/badge/Status-Em_desenvolvimento-yellow)
+![Versão](https://img.shields.io/badge/Versão-v0.0.0-blue)
+![Lint](https://img.shields.io/badge/Lint-oxlint-success)
+[![Licença](https://img.shields.io/github/license/Vitor-vas/Vitor-vas-portfolio)](#-licença)
 
 ### Outros exemplos de badges:
 
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/releases) ![React](https://img.shields.io/badge/React-19.1.1-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-7.1.2-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![Java](https://img.shields.io/badge/Java-17-007ec6?style=for-the-badge&logo=openjdk&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-3.9.9-007ec6?style=for-the-badge&logo=apachemaven&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-007ec6?style=for-the-badge&logo=springboot&logoColor=white) ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-3.1.1-007ec6?style=for-the-badge&logo=thymeleaf&logoColor=white) ![GitHub repo size](https://img.shields.io/github/repo-size/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=files) ![GitHub directory file count](https://img.shields.io/github/directory-file-count/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=files) ![GitHub stars](https://img.shields.io/github/stars/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=python) ![GitHub license](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&color=007ec6&logo=gitkraken) ![GitHub last commit](https://img.shields.io/github/last-commit/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=clockify) ![Vercel](https://vercelbadge.vercel.app/api/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2Fjoaopauloaramuni%2Flaboratorio-de-desenvolvimento-de-software&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
+![React](https://img.shields.io/badge/React-19.3.0-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-8.3.4-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-007ec6?style=for-the-badge&logo=typescript&logoColor=white) ![Motion](https://img.shields.io/badge/Motion-14.2.0-007ec6?style=for-the-badge&logo=framer&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-7.18.4-007ec6?style=for-the-badge&logo=reactrouter&logoColor=white) ![EmailJS](https://img.shields.io/badge/EmailJS-4.4.1-007ec6?style=for-the-badge&logo=maildotru&logoColor=white) ![GitHub repo size](https://img.shields.io/github/repo-size/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=files) ![GitHub directory file count](https://img.shields.io/github/directory-file-count/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=files) ![GitHub stars](https://img.shields.io/github/stars/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=typescript) ![GitHub license](https://img.shields.io/github/license/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&color=007ec6&logo=gitkraken) ![GitHub last commit](https://img.shields.io/github/last-commit/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=clockify) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2FVitor-vas%2FVitor-vas-portfolio&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
 
 ---
 
@@ -50,24 +49,21 @@
 - [Instalação e Execução](#-instalação-e-execução)
   - [Pré-requisitos](#pré-requisitos)
   - [Variáveis de Ambiente](#-variáveis-de-ambiente)
-     - [1 Back-end (Spring Boot)](#1-back-end-spring-boot)
-     - [2 Front-end (React, Vite)](#2-front-end-react-vite)
-     - [3 Exemplos de Variáveis de Ambiente na Vercel](#3-exemplos-de-variáveis-de-ambiente-na-vercel)
+     - [1 Front-end (React, Vite)](#1-front-end-react-vite)
+     - [2 Exemplos de Variáveis de Ambiente na Vercel e na Netlify](#2-exemplos-de-variáveis-de-ambiente-na-vercel-e-na-netlify)
   - [Instalação de Dependências](#-instalação-de-dependências)
     - [Front-end (React)](#front-end-react)
-    - [Back-end (Spring Boot)](#back-end-spring-boot)
-  - [Inicialização do Banco de Dados (PostgreSQL)](#-inicialização-do-banco-de-dados-postgresql)
+  - [Configuração do Serviço de E-mail (EmailJS)](#-configuração-do-serviço-de-e-mail-emailjs)
   - [Como Executar a Aplicação](#-como-executar-a-aplicação)
-    - [Terminal 1: Back-end (Spring Boot)](#terminal-1-back-end-spring-boot)
-    - [Terminal 2: Front-end (React, Vite)](#terminal-2-front-end-react-vite)
-    - [Execução Local Completa com Docker Compose (Incluindo Banco de Dados)](#-execução-local-completa-com-docker-compose-incluindo-banco-de-dados)
-    - [Passos para build, inicialização e execução](#-passos-para-build-inicialização-e-execução)
+    - [Terminal: Front-end (React, Vite)](#terminal-front-end-react-vite)
+    - [Build de Produção e Pré-visualização Local](#-build-de-produção-e-pré-visualização-local)
+    - [Passos para build, pré-visualização e execução](#-passos-para-build-pré-visualização-e-execução)
 - [Deploy](#-deploy)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Demonstração](#-demonstração)
-  - [Aplicativo Mobile](#-aplicativo-mobile)
+  - [Versão Mobile (Responsiva)](#-versão-mobile-responsiva)
   - [Aplicação Web](#-aplicação-web)
-  - [Exemplo de saída no Terminal (para Back-end, API, CLI)](#-exemplo-de-saída-no-terminal-para-back-end-api-cli)
+  - [Exemplo de saída no Terminal (para Build e Servidor de Desenvolvimento)](#-exemplo-de-saída-no-terminal-para-build-e-servidor-de-desenvolvimento)
 - [Testes](#-testes)
 - [Documentações utilizadas](#-documentações-utilizadas)
 - [Autores](#-autores)
@@ -79,46 +75,40 @@
 
 ## 🔗 Links Úteis
 * 🌐 **Demo Online:** [Acesse a Aplicação Web](<link-da-demo-web>)
-  > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
-* 📱 **Download Mobile:** [App Store](<link-app-store>) | [Google Play](<link-google-play>) | [APK Direto](<link-para-apk-direto>)
-  > 📱 **Descrição:** Links diretos para download nas lojas de aplicativos (se aplicável) e para o arquivo de instalação direta no Android (APK).
-* 📖 **Documentação:** [Leia a Wiki/Docs](<link-para-docs>)
-  > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
+  > 💻 **Descrição:** Link para o portfólio em ambiente de produção (Ex: hospedado na Vercel, Netlify ou GitHub Pages).
+* 👤 **Perfis Profissionais:** [GitHub](https://github.com/Vitor-vas) | [LinkedIn](https://www.linkedin.com/in/vitorasouza/) | [E-mail](mailto:vitoraugustosouzas007@gmail.com)
+  > 🔗 **Descrição:** Links diretos para o meu código, perfil profissional e contato por e-mail.
+* 📖 **Documentação:** [Leia a seção de Documentações utilizadas](#-documentações-utilizadas)
+  > 📚 **Descrição:** Acesso à documentação das principais tecnologias utilizadas no projeto (React, Vite, Motion, React Router e EmailJS).
 
 ---
 
 ## 📝 Sobre o Projeto
-Nesta seção, descreva de forma clara e objetiva **o propósito do seu projeto**, explicando:
+O **Portfolio Profissional** nasceu da necessidade de reunir, em um único lugar e de forma interativa, o que eu construo e quem eu sou como desenvolvedor.
 
-- **Por que ele existe** — qual motivação levou à sua criação.  
-- **Qual problema ele resolve** — que dor, necessidade ou oportunidade ele atende.  
-- **Qual o contexto** — acadêmico, profissional, pessoal, experimental, etc.  
-- **Onde ele pode ser utilizado** — cenários reais ou simulados.  
+- **Por que ele existe** — para ter uma vitrine própria, mais autêntica e dinâmica do que um currículo em PDF, mostrando na prática meu domínio de **React**, **TypeScript** e **animações de interface**.
+- **Qual problema ele resolve** — centraliza projetos, experiência acadêmica/profissional e canais de contato, evitando que recrutadores precisem navegar por vários perfis e repositórios para me conhecer.
+- **Qual o contexto** — projeto pessoal e acadêmico, desenvolvido durante a graduação em **Engenharia de Software na PUC Minas**, que serve também como laboratório para boas práticas de front-end e interação humano-computador (IHC).
+- **Onde ele pode ser utilizado** — em processos seletivos de **estágio**, oportunidades de **freelancer** e como cartão de visitas digital em redes profissionais.
 
-Procure responder perguntas como:
-- *Qual foi a ideia inicial do projeto?*
-- *O que ele entrega de valor ao usuário?*
-- *Por que alguém utilizaria ou contribuiria com esse projeto?*
-- *O que o torna relevante ou interessante?*
-
-Escreva de forma objetiva, mas completa, para que qualquer pessoa entenda rapidamente **o que é** e **por que importa**.
+**O que ele entrega de valor:** uma navegação fluida entre páginas, projetos apresentados com descrição, tecnologias, repositório e imagem, e um formulário de contato que envia mensagens diretamente para o meu e-mail.
 
 > [!NOTE]
-> Esta seção segue boas práticas de documentação profissional e deve ser ajustada conforme o tipo e o objetivo do seu projeto.
+> Todo o conteúdo é editável sem mexer na lógica das páginas: projetos em `src/data/projects.ts`, experiências em `src/data/experiences.ts`, links de contato em `src/data/socials.ts`, cards da página inicial em `src/data/cards.ts` e o texto de "Sobre mim" em `src/pages/Aboutme.tsx`.
 
 ---
 
 ## ✨ Funcionalidades Principais
-Liste as funcionalidades de forma clara e objetiva.
 
-- 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
-- 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
-- ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens, Posts).
-- 📊 **Relatórios Exportáveis:** Exportação de dados em PDF, CSV ou Excel.
-- 🌐 **Internacionalização (i18n):** Suporte a múltiplos idiomas.
-- 🧵 **Logs e Monitoramento:** Registro detalhado de atividades e análise de desempenho.
-- 🔄 **Integração com APIs Externas:** Conexão com serviços de terceiros (pagamentos, mapas, autenticação, etc.).
-- 📨 **Sistema de Notificações:** Envio de alertas por e-mail, push ou notificações internas.
+- 🧭 **Navegação por Rotas:** React Router com layout compartilhado (cabeçalho, barra de status e rodapé) e **transições animadas** entre as páginas.
+- 🎠 **Carrossel na Página Inicial:** cards que podem ser navegados por arrastar, clicar, botões de controle e paginação, levando às demais páginas.
+- 🪪 **Sobre mim:** card único, **arrastável** pela tela, com retorno ao centro por duplo clique.
+- 🗂️ **Projetos em Carrossel:** cards em leque; ao selecionar um projeto, os demais somem e o escolhido vai ao centro com descrição, tecnologias, links e imagem.
+- 🕒 **Linha do Tempo de Experiência:** cargos, datas com duração calculada automaticamente, local, tópicos com **"Ver mais"** e tags de tecnologias.
+- ✉️ **Formulário de Contato Funcional:** validação de campos, envio via **EmailJS**, proteção *honeypot* contra bots, atalho `⌘/Ctrl + Enter` e botões para GitHub, LinkedIn, WhatsApp e Instagram.
+- 🌐 **Internacionalização (i18n):** alternância entre **PT-BR e EN** pelo cabeçalho, via Context API (aplicada nas páginas *Sobre mim* e *Experiência*).
+- 📱 **Ajustes para Telas Pequenas:** layouts adaptados nas páginas *Sobre mim*, *Projetos*, *Experiência* e *Contato*.
+- 🚧 **Currículo:** página reservada e já roteada, com o conteúdo em construção.
 
 ---
 
@@ -128,60 +118,95 @@ As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construç
 
 ### 💻 Front-end
 
-* **Framework/Biblioteca:** [Ex: React v18, Vue.js v3, Angular v17]
-* **Linguagem/Superset:** [Ex: TypeScript, JavaScript ES6+]
-* **Estilização:** [Ex: Tailwind CSS, Sass, Styled Components, Material UI]
-* **Gerenciamento de Estado:** [Ex: Redux Toolkit, Zustand, Context API]
-* **Build Tool:** [Ex: Vite, Webpack]
+* **Framework/Biblioteca:** React v19 (com React Compiler habilitado via plugin do Babel)
+* **Linguagem/Superset:** TypeScript v6
+* **Roteamento:** React Router v7 (`react-router-dom`)
+* **Animações:** Motion v14 (`motion/react`)
+* **Estilização:** CSS puro (arquivo global `index.css` + um arquivo por página)
+* **Gerenciamento de Estado:** Hooks do React (`useState`, `useRef`) e Context API (idioma)
+* **Build Tool:** Vite v8
 
-### 🖥️ Back-end
+### 🔌 Serviços Externos
 
-* **Linguagem/Runtime:** [Ex: Java 17 (JDK), Node.js v20, Python 3.11]
-* **Framework:** [Ex: Spring Boot 3.x, NestJS, Express, Django]
-* **Banco de Dados:** [Ex: PostgreSQL, MySQL, MongoDB]
-* **ORM / Query Builder:** [Ex: Hibernate/JPA, Prisma, TypeORM]
-* **Autenticação:** [Ex: JWT, OAuth2, Spring Security]
+* **Envio de E-mail:** EmailJS (`@emailjs/browser` v4), sem necessidade de back-end próprio
+* **Back-end / Banco de Dados:** não se aplica, o projeto é 100% front-end
 
-### 📱 Mobile (Opcional)
+### 🧰 Qualidade de Código
 
-* **Framework:** [Ex: React Native, Flutter, Kotlin Multiplatform]
-* **Ferramentas:** [Ex: Expo, Android Studio, Xcode]
+* **Lint:** oxlint
+* **Verificação de Tipos:** TypeScript (`tsc -b` executado antes do build)
 
 ### ⚙️ Infraestrutura & DevOps
 
-* **Containerização:** [Ex: Docker, Docker Compose]
-* **Orquestração:** [Ex: Kubernetes (K8s)]
-* **Cloud:** [Ex: AWS (EC2, RDS, S3), Vercel, Heroku, Google Cloud]
-* **CI/CD:** [Ex: GitHub Actions, Jenkins, SonarQube]
+* **Controle de Versão:** Git e GitHub
+* **Hospedagem:** qualquer provedor de sites estáticos (Ex: Vercel, Netlify, GitHub Pages)
+* **Build:** `tsc -b && vite build`, gerando a pasta `dist`
 
 ---
 
 ## 🏗 Arquitetura
 
-Descreva aqui a **arquitetura completa do sistema**, explicando como as camadas, módulos e componentes foram organizados. Informe também **por que** essa arquitetura foi escolhida e **quais problemas ela ajuda a resolver**.
+O projeto é uma **Single Page Application (SPA)** sem back-end. Toda a interface é construída no navegador, e o único serviço externo é o **EmailJS**, usado para entregar as mensagens do formulário de contato.
 
-Você pode incluir:
+**Visão geral:**
 
-- **Visão geral da arquitetura** (ex.: camadas, módulos, microsserviços, monólito modular, hexagonal, MVC etc.)
-- **Principais componentes** e o papel de cada um
-- **Padrões de design adotados** (ex.: Repository, Service Layer, DTOs, Factory, Observer)
-- **Fluxo de dados** entre as partes do sistema
-- **Tecnologias utilizadas em cada camada**
-- **Decisões arquiteturais importantes**
-- **Trade-offs** ou limitações relevantes
+- **Layout Route:** o componente `Layout` envolve todas as páginas e mantém `Header`, `StatusBar` e `Footer` montados; apenas o conteúdo central muda entre rotas.
+- **Transições de página:** `AnimatePresence` com `useOutlet()` permite que a página atual execute a animação de saída antes da próxima entrar.
+- **Interface orientada a dados:** projetos, experiências, cards e links ficam em `src/data`, separados dos componentes.
+- **Idioma global:** o estado do idioma vive no `Layout` e é compartilhado por Context API (`LanguageContext` + hook `useLang`).
+- **Páginas e componentes:** `src/pages` contém uma página por rota; `src/components` reúne as peças reutilizáveis (cabeçalho, carrossel, cards, rodapé).
+
+**Padrões e decisões adotadas:**
+
+- **Padrões de design:** Layout Route, Provider/Context, Data-driven UI e *Variants* do Motion para animações declarativas.
+- **Imagens dos projetos:** resolvidas por `src/utils/projectImage.ts` com `import.meta.glob`, permitindo informar apenas o nome do arquivo em `projects.ts`.
+- **Contato sem back-end:** o EmailJS dispensa um servidor próprio; as chaves ficam em variáveis `VITE_*`.
+
+**Trade-offs e limitações:**
+
+- Por ser uma SPA com `BrowserRouter`, o provedor de hospedagem precisa redirecionar todas as rotas para `index.html` (veja a seção [Deploy](#-deploy)).
+- Sem renderização no servidor (SSR), o conteúdo é montado no navegador.
+- A chave pública do EmailJS é visível no navegador por natureza; recomenda-se restringir os domínios permitidos no painel do serviço.
+- A tradução PT-BR/EN ainda não cobre todas as páginas.
 
 ### Exemplos de diagramas
 
-Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados lado a lado.
+Para melhor visualização e entendimento da estrutura do sistema, os principais fluxos estão descritos nos diagramas abaixo.
 
-| Diagrama de Arquitetura | Detalhe da Arquitetura |
-| :---: | :---: |
-| **Visão Geral (Macro)** | **Camada de Serviço (Micro)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
-| **Modelo de Dados (Entidades)** | **Fluxo de Autenticação** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px"> |
-| **Infraestrutura (Cloud)** | **API Gateway (Rotas)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px"> |
+**Visão Geral (Rotas e Layout)**
+
+```mermaid
+flowchart TD
+    A["main.tsx"] --> B["App.tsx · BrowserRouter + Routes"]
+    B --> C["Layout (Layout Route)"]
+    C --> H["Header (idioma + navegação)"]
+    C --> S["StatusBar"]
+    C --> O["Outlet animado · AnimatePresence"]
+    C --> F["Footer"]
+    O --> P1["/ · Home"]
+    O --> P2["/about · Aboutme"]
+    O --> P3["/projects · Projects"]
+    O --> P4["/experience · Experiences"]
+    O --> P5["/curriculum · Curriculum"]
+    O --> P6["/contact · Contact"]
+    O --> P7["* · NotFound"]
+```
+
+**Fluxo do Formulário de Contato**
+
+```mermaid
+sequenceDiagram
+    actor U as Visitante
+    participant F as Contact.tsx
+    participant E as EmailJS
+    participant I as Caixa de entrada
+    U->>F: Preenche e envia o formulário
+    F->>F: Valida nome, e-mail e mensagem
+    F->>E: emailjs.send(serviceId, templateId, params, publicKey)
+    E->>I: Entrega o e-mail
+    E-->>F: Sucesso ou erro
+    F-->>U: Exibe a mensagem de confirmação
+```
 
 ---
 
@@ -190,307 +215,233 @@ Para melhor visualização e entendimento da estrutura do sistema, os diagramas 
 ### Pré-requisitos
 Certifique-se de que o usuário tenha o ambiente configurado.
 
-* **Java JDK:** Versão **17** ou superior (Necessário para o **Back-end Spring Boot**)
-* **Node.js:** Versão LTS (v18.x ou superior) (Necessário para o **Front-end React**)
-* **Gerenciador de Pacotes:** npm ou yarn
-* **Docker** (Opcional, mas **altamente recomendado** para rodar o Banco de Dados)
+* **Node.js:** Versão **20.19+** ou **22.12+** (requisito do Vite 8)
+* **Gerenciador de Pacotes:** npm (ou yarn)
+* **Conta no EmailJS** (Opcional, necessária apenas para o formulário de contato enviar e-mails)
 
 ---
 
 ### 🔑 Variáveis de Ambiente
 
-Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
+Crie um arquivo `.env` específico e/ou configure as variáveis de ambiente no seu provedor de hospedagem.
 
-#### 1 Back-end (Spring Boot)
+> [!NOTE]
+> O projeto é 100% front-end, portanto não há variáveis de ambiente de back-end ou de banco de dados.
 
-Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
+#### 1 Front-end (React, Vite)
 
-| Variável | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
-| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
-| `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
-| `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
-| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
-
-#### 2 Front-end (React, Vite)
-
-Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
+Crie um arquivo **`.env`** na raiz do projeto (você pode copiar o modelo com `cp .env.example .env`) e use o prefixo `VITE_` para expor as variáveis ao *bundle* da aplicação.
 
 | Variável | Descrição | Exemplo |
 | :--- | :--- | :--- |
-| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
-| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
-| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
+| `VITE_EMAILJS_SERVICE_ID` | ID do serviço de e-mail configurado no EmailJS. | `service_xxxxxxx` |
+| `VITE_EMAILJS_TEMPLATE_ID` | ID do template de e-mail do EmailJS. | `template_xxxxxxx` |
+| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública da conta no EmailJS. | `sua_public_key_aqui` |
 
 ---
 
-#### 3. Exemplos de Variáveis de Ambiente na Vercel
+#### 2. Exemplos de Variáveis de Ambiente na Vercel e na Netlify
 
-A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
-Aqui estão exemplos comuns utilizadas em aplicações front-end e full-stack:
-
----
-
-##### **Exemplo 1 – Front-end com Next.js usando API externa**
-
-```
-NEXT_PUBLIC_API_URL=https://meu-backend.vercel.app/api
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-seu_google_analytics_id_aqui
-```
+Ambas as plataformas permitem configurar variáveis no painel do projeto. Os exemplos abaixo usam as mesmas variáveis do arquivo `.env`.
 
 ---
 
-##### **Exemplo 2 – Aplicação Full-stack (Next.js + Prisma + PostgreSQL)**
-
-```
-DATABASE_URL=postgresql://admin:senha-super-segura@ep-meu-banco.aws.neon.tech:5432/verceldb
-NEXTAUTH_SECRET=uma_chave_muito_longa_e_segura
-NEXTAUTH_URL=https://meu-sistema.vercel.app
-```
-
----
-
-##### **Exemplo 3 – Integração com APIs externas**
-
-```
-STRIPE_SECRET_KEY=sk_live_seu_stripe_key_aqui
-OPENAI_API_KEY=sk-sua_openai_key_aqui
-SENDGRID_API_KEY=SG.sua_sendgrid_key_aqui
-```
-
----
-
-##### **Exemplo 4 – Frontend com Vite (EmailJS)**
+##### **Exemplo 1 – Vercel (Project Settings > Environment Variables)**
 
 ```
 VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
+VITE_EMAILJS_TEMPLATE_ID=seu_template_id_aqui
 VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
 ```
-
-> **Obs:** As variáveis de ambiente em projetos **Vite** precisam começar com `VITE_` para que o Vite as reconheça e as inclua no *bundle* do frontend; variáveis sem esse prefixo não ficam disponíveis no código do cliente.
 
 ---
 
-Para adicionar essas variáveis:
-
-1.  Acesse a página de Environment Variables do seu projeto no Vercel (ex.: `https://vercel.com/<seu-usuario>/<seu-projeto>/settings/environment-variables`)
-2.  Clique em **"Add"** para adicionar cada variável com o nome e valor correspondente.
-
-Alternativamente, se estiver desenvolvendo localmente, crie um arquivo **`.env.local`** dentro da pasta **`frontend`** do seu projeto com o seguinte conteúdo:
+##### **Exemplo 2 – Netlify (Site configuration > Environment variables)**
 
 ```
-# Variável essencial para conectar ao Back-end Spring Boot rodando localmente (normalmente na porta 8080)
-VITE_API_URL=http://localhost:8080/api
-
-# Variáveis para integrações externas de serviço de e-mail
 VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
+VITE_EMAILJS_TEMPLATE_ID=seu_template_id_aqui
 VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
-
-# Outras chaves de serviço
-VITE_GOOGLE_MAPS_KEY=AIzaSy...
 ```
 
-> 💡 **Localização:** Garanta que este arquivo esteja em **`/frontend/.env.local`** para que o **Vite** consiga carregá-lo e disponibilizar as variáveis para o Front-end durante o desenvolvimento.
+> **Obs:** As variáveis de ambiente em projetos **Vite** precisam começar com `VITE_` para que o Vite as reconheça e as inclua no *bundle* do frontend; variáveis sem esse prefixo não ficam disponíveis no código do cliente. Após alterar o `.env`, reinicie o servidor de desenvolvimento.
+
+---
+
+Para adicionar essas variáveis em produção:
+
+1.  Acesse a página de variáveis de ambiente do seu projeto na plataforma escolhida.
+2.  Clique em **"Add"** (ou equivalente) para adicionar cada variável com o nome e valor correspondente.
+3.  Faça um novo deploy para que o build use os valores atualizados.
+
+Alternativamente, se estiver desenvolvendo localmente, crie um arquivo **`.env`** na raiz do projeto com o seguinte conteúdo:
+
+```
+# Serviço de e-mail do formulário de contato (EmailJS)
+VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
+VITE_EMAILJS_TEMPLATE_ID=seu_template_id_aqui
+VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
+```
+
+> 💡 **Localização:** Garanta que este arquivo esteja na **raiz do projeto** (ao lado do `package.json`) para que o **Vite** consiga carregá-lo durante o desenvolvimento. O `.gitignore` já impede que ele seja versionado.
 
 ### 📦 Instalação de Dependências
 
 Clone o repositório e instale as dependências.
 
-1.  **Clone o Repositório:**
+1.  **Clone o Repositório:**
 
 ```bash
 git clone <URL_DO_SEU_REPOSITÓRIO>
-cd <pasta-do-projeto>
+cd Vitor-vas-portfolio
 ```
 
-2.  **Instale as Dependências (Monorepo):**
+2.  **Instale as Dependências:**
 
-Como o projeto está dividido, você precisa instalar as dependências separadamente para o Front-end (React, usando NPM/Yarn) e garantir que o Back-end (Spring Boot, usando Maven/Gradle Wrapper) tenha suas dependências resolvidas.
+Como o projeto possui uma única aplicação, basta instalar as dependências do Node.js na raiz do repositório.
 
 #### Front-end (React)
 
-Acesse a pasta do Front-end e instale as dependências do Node.js:
-
 ```bash
-cd frontend
 npm install
 # ou
 yarn install
-cd .. # Retorna para a raiz
 ```
-
-#### Back-end (Spring Boot)
-
-O Spring Boot utiliza o **Maven Wrapper** (`./mvnw`) ou **Gradle Wrapper** (`./gradlew`) para gerenciar dependências. Execute o comando de instalação/build limpo antes de rodar.
-
-* **Usando Maven (`pom.xml`):**
-    ```bash
-    cd backend
-    ./mvnw clean install
-    cd ..
-    ```
-
-* **Usando Gradle (`build.gradle`):**
-    ```bash
-    cd backend
-    ./gradlew clean build
-    cd ..
-    ```
 
 ---
 
-### 💾 Inicialização do Banco de Dados (PostgreSQL)
+### 💾 Configuração do Serviço de E-mail (EmailJS)
 
-O projeto utiliza **PostgreSQL**. A forma mais fácil de inicializar o banco é via Docker (para execução sem `docker-compose`):
+O formulário de contato envia as mensagens pelo **EmailJS**. Sem essa configuração o site funciona normalmente, mas o envio de mensagens retorna erro.
 
-1. **Rode o Container do PostgreSQL:**  
-   (Certifique-se que o Docker está em execução)
+1. **Crie uma conta e um serviço de e-mail:**  
+   Acesse o [painel do EmailJS](https://dashboard.emailjs.com), conecte o seu provedor de e-mail em **Email Services** e copie o **Service ID**.
 
-```bash
-docker run --name minha_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=senha-segura-123 -e POSTGRES_DB=nome_do_banco -p 5432:5432 -d postgres:16
+2. **Crie um template:**  
+   Em **Email Templates**, crie um template usando as variáveis enviadas pelo formulário e copie o **Template ID**.
+
+```
+{{name}}      -> nome de quem enviou
+{{email}}     -> e-mail de quem enviou (use também no campo "Reply To")
+{{subject}}   -> assunto (padrão: "Portfolio contact")
+{{message}}   -> mensagem
 ```
 
-2. **Execute as Migrações:**  
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados automaticamente no startup (via Hibernate `ddl-auto`) ou utilizando ferramentas como **Flyway** ou **Liquibase**.
+3. **Copie a chave pública:**  
+   Em **Account**, copie a **Public Key**.
 
-* **Se o Spring Boot gerencia o schema (padrão):** Nenhuma ação manual é necessária, basta rodar o Back-end (veja a próxima seção).
-* **Se usar Flyway/Liquibase via Maven:**
-    ```bash
-    cd backend
-    ./mvnw flyway:migrate
-    # ou
-    ./mvnw liquibase:update
-    ```
+4. **Preencha o arquivo `.env`:**
+
+```bash
+cp .env.example .env
+# edite o .env com o Service ID, o Template ID e a Public Key
+```
+
+> 💡 **Dica:** Em **Security**, no painel do EmailJS, restrinja os domínios permitidos para evitar o uso indevido da sua chave pública.
+
 ---
 
 ### ⚡ Como Executar a Aplicação
-Execute a aplicação em modo de desenvolvimento em **dois terminais separados**.
+Execute a aplicação em modo de desenvolvimento em **um único terminal**.
 
-#### Terminal 1: Back-end (Spring Boot)
-
-Inicie a API do Spring Boot. Ela tentará se conectar ao banco de dados rodando no Docker.
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-🚀 *O Back-end estará disponível em **http://localhost:8080**.*
-
----
-
-#### Terminal 2: Front-end (React, Vite)
+#### Terminal: Front-end (React, Vite)
 
 Inicie o servidor de desenvolvimento do Front-end.
 
 ```bash
-cd frontend
 npm run dev
 # ou
 yarn dev
 ```
-🎨 *O Front-end estará disponível em **http://localhost:5173** (ou a porta configurada no Vite/CRA).*
+🎨 *O Front-end estará disponível em **http://localhost:5173** (ou a porta configurada no Vite).*
 
 ---
 
-#### 🐳 Execução Local Completa com Docker Compose (Incluindo Banco de Dados)
+#### 🏗️ Build de Produção e Pré-visualização Local
 
-Para uma execução local que inclui o serviço de Back-end (**Spring Boot**), Front-end (**React**) e o banco de dados **PostgreSQL**, usaremos o **`docker-compose`** para orquestração.
+Para testar localmente exatamente o que será publicado, gere o build de produção e sirva a pasta `dist` com o servidor de pré-visualização do Vite.
 
-Antes de tudo, certifique-se de que o **Docker Desktop** (no Mac/Windows) ou o **serviço Docker** (em Linux) está em execução.
-
-- **No Mac/Windows**: basta abrir o aplicativo **Docker Desktop**.
-- **No Linux**: rode o comando abaixo para iniciar o serviço:
-
-```bash
-sudo systemctl start docker
-```
+Antes de tudo, certifique-se de que as dependências estão instaladas (`npm install`) e de que o arquivo `.env` está configurado.
 
 ---
 
-#### 📦 Passos para build, inicialização e execução
+#### 📦 Passos para build, pré-visualização e execução
 
-1. Acesse a pasta raiz do projeto (onde o arquivo `docker-compose.yml` está localizado):
+1. Acesse a pasta raiz do projeto (onde o arquivo `package.json` está localizado):
 
 ```bash
-cd /caminho/do/projeto/nome-do-projeto
+cd /caminho/do/projeto/Vitor-vas-portfolio
 ```
 
-2. Suba todos os serviços (Back-end, Front-end e Banco de Dados) definidos no `docker-compose.yml`:
+2. Verifique o código com o lint:
 
 ```bash
-docker-compose up --build -d
+npm run lint
+```
+
+3. Gere o build de produção (executa a verificação de tipos e o build do Vite):
+
+```bash
+npm run build
 ```
 
 > [!NOTE]
-> 💡 O parâmetro `--build` garante que as imagens mais recentes do projeto sejam geradas, e `-d` executa em segundo plano.
+> 💡 O comando `npm run build` executa `tsc -b && vite build`. Se houver qualquer erro de tipagem, o build é interrompido antes de gerar a pasta `dist`.
 
-3. Verifique se os containers estão rodando:
+4. Sirva o build localmente:
 
 ```bash
-docker ps
+npm run preview
 ```
-
-4. **Execute as Migrações do Banco de Dados:**
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados (via Flyway/Liquibase ou Hibernate) na **inicialização do serviço**.
-
-* **Verificação:** Se o serviço de Back-end (`backend` ou `api`) for o responsável pelas migrações, verifique os logs para confirmar se o processo foi concluído.
-    ```bash
-    docker logs <nome_do_container_backend>
-    ```
-* *Atenção:* O comando `npm run db:migrate` é exclusivo para Node.js e **não** deve ser usado.
 
 5. Abra no navegador:
-   O Front-end deve estar acessível na porta configurada no `docker-compose` (Exemplo: <http://localhost:3000> ou <http://localhost:5173>)
+   A pré-visualização estará acessível na porta exibida no terminal (Exemplo: <http://localhost:4173>)
 
-6. Para parar e remover todos os containers, redes e volumes (exceto volumes nomeados):
+6. Para encerrar o servidor, pressione `Ctrl + C` no terminal.
 
-```bash
-docker-compose down
-```
-
-✅ **Em resumo:** Usar **`docker-compose`** simplifica a execução do ambiente completo, isolando as dependências de **Java (Spring Boot)** e **Node.js (React)** e garantindo que o PostgreSQL esteja disponível.
+✅ **Em resumo:** Usar **`npm run dev`** durante o desenvolvimento e **`npm run build` + `npm run preview`** antes de publicar garante que o site se comporta em produção da mesma forma que no ambiente local.
 
 ---
 
 ## 🚀 Deploy
 Instruções claras para deploy em produção.
 
-1.  **Build do Projeto:**
-    Execute o build separadamente para os dois artefatos (JAR para o Back-end e arquivos estáticos para o Front-end).
+1.  **Build do Projeto:**
+    Execute o build para gerar os arquivos estáticos do Front-end.
 
 ```bash
-# 1. Build do Front-end (React/Vite) - Gera a pasta /dist com arquivos estáticos
-cd frontend
+# Build do Front-end (React/Vite) - Gera a pasta /dist com arquivos estáticos
 npm run build
-
-# 2. Build do Back-end (Spring Boot/Maven) - Gera o arquivo .jar executável em /target
-cd ../backend
-./mvnw clean package
 ```
 
-2.  **Configuração do Ambiente de Produção:** Defina as variáveis de ambiente no seu provedor (e.g., Vercel, Railway, Heroku, DigitalOcean).
+2.  **Configuração do Ambiente de Produção:** Defina as variáveis de ambiente no seu provedor (e.g., Vercel, Netlify, GitHub Pages).
 
-> 🔑 **Variáveis Cruciais:** Certifique-se de configurar as variáveis de **conexão com o banco de dados** (`SPRING_DATASOURCE_URL`, etc.) para o Back-end e a **URL da API de produção** (`VITE_API_URL`) para o Front-end.
+> 🔑 **Variáveis Cruciais:** Certifique-se de configurar `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` e `VITE_EMAILJS_PUBLIC_KEY` no provedor, caso contrário o formulário de contato não enviará mensagens.
 
-3.  **Execução em Produção:**
-    A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
+3.  **Redirecionamento das Rotas (SPA):**
+    Como o projeto usa `BrowserRouter`, abrir diretamente uma URL como `/projects` exige que o servidor devolva o `index.html` para todas as rotas.
+
+```json
+// Vercel: crie o arquivo vercel.json na raiz do projeto
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
+```
+
+```
+# Netlify: crie o arquivo public/_redirects
+/* /index.html 200
+```
+
+4.  **Execução em Produção:**
+    A forma de execução depende do seu provedor, mas como o projeto gera apenas arquivos estáticos, ele não é executado via Node, e sim servido por um servidor web.
 
 ```bash
-# ☕ Execução do Back-end Spring Boot (Java JAR)
-# Este comando inicia a API usando o artefato JAR gerado.
-java -jar backend/target/nome-do-do-projeto-0.0.1-SNAPSHOT.jar
-
 # 🟢 Execução do Front-end (React/Vite)
-# O Front-end (arquivos estáticos) não é executado via Node, mas servido por um servidor web.
 # Exemplo de servidor de arquivos estáticos (usando Nginx, Vercel, Netlify, etc.)
 # Para simular a produção localmente ou rodar em uma VPS simples, use o pacote 'serve':
 npm install -g serve
-serve -s frontend/dist
+serve -s dist
 ```
 
 ---
@@ -501,77 +452,68 @@ Descreva o propósito das pastas principais.
 
 ```
 .
-├── .editorconfig                # ✍️ Padronização de estilo de código.
-├── .env.local                   # 🔒 Variáveis SENSÍVEIS do ambiente LOCAL (não versionado).
-├── .env.test                    # 🧪 Variáveis de ambiente para TESTES AUTOMATIZADOS.
-├── .env.staging                 # ☁️ Variáveis de ambiente para STAGING/HOMOLOGAÇÃO.
-├── .env.example                 # 🧩 Exemplo de TODAS as variáveis necessárias (sem valores sensíveis).
-├── .gitignore                   # 🧹 Ignora arquivos/pastas não versionadas (.env, node_modules, target, etc.).
-├── .vscode/                     # ⚙️ Configurações de ambiente da IDE (opcional).
-├── .github/                     # 🤖 CI/CD (Actions), templates de Issues e Pull Requests.
+├── .env                         # 🔒 Variáveis SENSÍVEIS do ambiente LOCAL (não versionado).
+├── .env.example                 # 🧩 Exemplo das variáveis necessárias (sem valores sensíveis).
+├── .gitignore                   # 🧹 Ignora arquivos/pastas não versionadas (.env, node_modules, dist, etc.).
+├── .oxlintrc.json               # ✨ Regras do oxlint.
 ├── README.md                    # 📘 Documentação principal do projeto.
-├── CONTRIBUTING.md              # 🤝 Guia de contribuição.
-├── LICENSE                      # ⚖️ Licença do projeto.
-├── docker-compose.yml           # 🐳 Orquestração dos containers (front/back/db/etc).
-├── docker-compose.override.yml  # 🐳 Configurações extras apenas para desenvolvimento.
+├── index.html                   # 📄 Documento HTML de entrada da aplicação.
+├── package.json                 # 📦 Dependências e scripts.
+├── package-lock.json            # 🔒 Lockfile das dependências.
+├── tsconfig.json                # 🛠️ Configuração base do TypeScript.
+├── tsconfig.app.json            # 🛠️ Configuração do TypeScript para o código da aplicação.
+├── tsconfig.node.json           # 🛠️ Configuração do TypeScript para arquivos do Vite.
+├── vite.config.ts               # ⚡ Configuração do Vite (React + React Compiler).
 │
-├── /frontend                    # 📁 Aplicação React
-│   ├── .env.example             # 🧩 Variáveis de ambiente do Front-end.
-│   ├── Dockerfile               # 🐳 Docker build do Front-end.
-│   ├── .eslintrc.js             # ✨ Regras do ESLint.
-│   ├── .prettierrc              # 🎨 Configuração do Prettier.
-│   ├── /public                  # 📂 Arquivos estáticos e index.html.
-│   ├── /src                     # 📂 Código-fonte React
-│   │   ├── /components          # 🧱 Componentes reutilizáveis (UI).
-│   │   ├── /pages               # 📄 Páginas/rotas da aplicação.
-│   │   ├── /services            # 🔌 Serviços e chamadas HTTP.
-│   │   ├── /hooks               # 🎣 Hooks personalizados.
-│   │   ├── /styles              # 🎨 Estilos globais, temas, Design System.
-│   │   ├── /assets              # 🖼️ Recursos estáticos importados
-│   │   │   ├── /images          # 🖼️ Imagens.
-│   │   │   ├── /icons           # 💡 Ícones.
-│   │   │   └── /fonts           # ✒️ Fontes personalizadas.
-│   │   └── /utils               # 🛠️ Funções utilitárias.
-│   ├── package.json             # 📦 Dependências e scripts.
-│   └── yarn.lock / package-lock.json # 🔒 Lockfile das dependências.
+├── /public                      # 📂 Arquivos estáticos servidos na raiz (favicon, ícones).
 │
-├── /backend                     # 📁 Aplicação Spring Boot
-│   ├── .env.example             # 🧩 Variáveis de ambiente do Back-end.
-│   ├── Dockerfile               # 🐳 Docker build do Back-end.
-│   │
-│   ├── /src/main/java           # 📂 Código-fonte Java
-│   │   └── /com/exemplo/app
-│   │       ├── /controller      # 🎮 Endpoints REST.
-│   │       ├── /service         # ⚙️ Regras e lógica de negócio.
-│   │       ├── /repository      # 🗄️ Repositórios (JPA/Hibernate).
-│   │       ├── /model           # 🧬 Entidades persistentes (JPA).
-│   │       ├── /domain          # 🌐 Objetos de Domínio puro (sem anotações).
-│   │       ├── /dto             # ✉️ Data Transfer Objects.
-│   │       ├── /config          # 🔧 Configurações gerais (DB, Swagger, CORS, etc.).
-│   │       ├── /exception       # 💥 Exceptions e handlers globais.
-│   │       └── /security        # 🛡️ Autenticação e Autorização (Spring Security).
-│   │
-│   ├── /src/main/resources      # 📂 Recursos do Spring Boot
-│   │   ├── application.yml         # ⚙️ Configuração principal da aplicação
-│   │   ├── application-dev.yml     # 🧪 Configurações específicas do ambiente de DESENVOLVIMENTO
-│   │   ├── application-prod.yml    # 🚀 Configurações específicas para PRODUÇÃO
-│   │   ├── application-test.yml    # 🧪 Configurações usadas nos testes automatizados
-│   │   ├── /static                # 🌐 Arquivos estáticos (HTML/CSS/JS).
-│   │   ├── /templates             # 🖼️ Templates Thymeleaf/Freemarker.
-│   │   ├── /messages              # 🌎 Arquivos de internacionalização (i18n).
-│   │   └── /db                    # 💾 Scripts de banco usados pela aplicação
-│   │       └── /migration         # 📜 Migrações do banco (Flyway/Liquibase).
-│   │
-│   ├── /src/test/java            # 🧪 Testes unitários e de integração.
-│   └── pom.xml / build.gradle    # 🛠️ Build e dependências.
-│
-├── /scripts                      # 📜 Scripts de automação
-│   ├── dev.sh                    # 🚀 Ambiente de desenvolvimento completo.
-│   ├── build_all.sh              # 🛠️ Build geral (front + back).
-│   └── deploy.sh                 # ☁️ Deploy em produção/homologação.
-│
-├── /docs                         # 📚 Documentação, arquitetura, modelos C4, Swagger/OpenAPI.
-└── /tests                        # 🧪 Testes End-to-End (Cypress/Playwright).
+└── /src                         # 📂 Código-fonte React
+    ├── main.tsx                 # 🚪 Ponto de entrada da aplicação.
+    ├── App.tsx                  # 🧭 Definição das rotas (React Router).
+    │
+    ├── /components              # 🧱 Componentes reutilizáveis (UI).
+    │   ├── Layout.tsx           # 🧩 Layout compartilhado, transições de página e provedor de idioma.
+    │   ├── Header.tsx           # 🔝 Logo, navegação e troca de idioma.
+    │   ├── Statusbar.tsx        # 📶 Barra de status.
+    │   ├── Footer.tsx           # 🔚 Rodapé com competências e links.
+    │   ├── Card.tsx             # 🃏 Card do carrossel da página inicial.
+    │   ├── Cardcarousel.tsx     # 🎠 Carrossel de cards.
+    │   └── Carouselcontrols.tsx # 🎛️ Botões e paginação do carrossel.
+    │
+    ├── /pages                   # 📄 Páginas/rotas da aplicação.
+    │   ├── Home.tsx             # 🏠 Página inicial (carrossel).
+    │   ├── Aboutme.tsx          # 🪪 Sobre mim (card arrastável).
+    │   ├── Projects.tsx         # 🗂️ Projetos (carrossel em leque).
+    │   ├── Experiences.tsx      # 🕒 Experiência (linha do tempo).
+    │   ├── Curriculum.tsx       # 📑 Currículo (em construção).
+    │   ├── Contact.tsx          # ✉️ Contato (formulário e links sociais).
+    │   └── NotFound.tsx         # 🚫 Página 404.
+    │
+    ├── /context                 # 🌐 Contextos globais.
+    │   └── LanguageContext.ts   # 🗣️ Idioma (PT-BR/EN) e hook useLang.
+    │
+    ├── /data                    # 🗃️ Conteúdo editável do portfólio.
+    │   ├── cards.ts             # 🃏 Cards da página inicial e links do rodapé.
+    │   ├── projects.ts          # 🗂️ Lista de projetos.
+    │   ├── experiences.ts       # 🕒 Lista de experiências.
+    │   └── socials.ts           # 🔗 Links dos botões da página de contato.
+    │
+    ├── /styles                  # 🎨 Estilos globais e por página.
+    │   ├── index.css            # 🎨 Estilos globais e variáveis de cor.
+    │   ├── App.css              # 🎨 Estilos adicionais da aplicação.
+    │   ├── aboutme.css          # 🎨 Estilos da página Sobre mim.
+    │   ├── projects.css         # 🎨 Estilos da página Projetos.
+    │   ├── experience.css       # 🎨 Estilos da página Experiência.
+    │   └── contact.css          # 🎨 Estilos da página Contato.
+    │
+    ├── /assets                  # 🖼️ Recursos estáticos importados
+    │   └── /projects            # 🖼️ Imagens dos projetos (crie a pasta e adicione os arquivos).
+    │
+    ├── /types                   # 🧬 Tipos TypeScript compartilhados.
+    │   └── Index.ts
+    │
+    └── /utils                   # 🛠️ Funções utilitárias.
+        └── projectImage.ts      # 🖼️ Resolve o caminho das imagens dos projetos.
 ```
 
 ---
@@ -583,23 +525,22 @@ Use GIFs e prints para mostrar o projeto em ação.
 > [!WARNING]
 > Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
 
-### 📱 Aplicativo Mobile
+### 📱 Versão Mobile (Responsiva)
 
-- GIF de demonstração (exemplo de fluxo de usuário):  
+- GIF de demonstração (exemplo de navegação no celular):  
 
 | Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
 |----------------|----------------|----------------|----------------|
-| <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
 | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 | Tela | Captura de Tela |
 | :---: | :---: |
-| **Tela Inicial (Home)** | **Tela de Perfil / Settings** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-| **Tela de Cadastro** | **Tela de Lista / Detalhes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
+| **Página Inicial (Home)** | **Sobre mim** |
+| _Sua captura aqui_ | _Sua captura aqui_ |
+| **Projetos** | **Contato** |
+| _Sua captura aqui_ | _Sua captura aqui_ |
 
 ### 🌐 Aplicação Web
 
@@ -607,66 +548,53 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 | Tela | Captura de Tela |
 | :---: | :---: |
-| **Página Inicial (Home)** | **Página de Login** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
+| **Página Inicial (Home)** | **Sobre mim** |
+| _Sua captura aqui_ | _Sua captura aqui_ |
+| **Projetos** | **Projeto Selecionado** |
+| _Sua captura aqui_ | _Sua captura aqui_ |
+| **Experiência** | **Contato** |
+| _Sua captura aqui_ | _Sua captura aqui_ |
 
-### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
+### 💻 Exemplo de Saída no Terminal (para Build e Servidor de Desenvolvimento)
 
-Caso o projeto seja focado em serviços de Back-end (API, microserviço, CLI), utilize esta seção para demonstrar a interação com o sistema e a resposta esperada.
+Como o projeto não possui back-end, esta seção demonstra a saída esperada dos principais comandos do dia a dia.
 
-#### 1. Demonstração da API (Exemplo com cURL)
+#### 1. Demonstração do Servidor de Desenvolvimento
 
-Mostra uma chamada simples para um endpoint da API (ex: GET de listagem).
-
-```bash
-# Chama o endpoint de listagem de usuários com o token de autenticação
-curl -X GET 'http://localhost:3000/api/v1/users' \
-     -H 'Authorization: Bearer <seu-jwt-token>'
-```
-
-**Saída Esperada:**
-```json
-{
-  "total": 2,
-  "users": [
-    {
-      "id": "1a2b3c",
-      "name": "Prof. Aramuni",
-      "email": "contato@exemplo.com",
-      "status": "active"
-    },
-    {
-      "id": "4d5e6f",
-      "name": "Colaborador Teste",
-      "email": "teste@exemplo.com",
-      "status": "inactive"
-    }
-  ]
-}
-```
-
----
-
-#### 2. Demonstração de Execução de CLI/Script
-
-Mostra como executar uma ferramenta de linha de comando ou um script de manutenção do projeto (ex: rodar migrações ou um job agendado).
+Inicia o Vite em modo de desenvolvimento, com recarregamento automático.
 
 ```bash
-# Executa a ferramenta de validação de Schema
-npm run cli validate:schema --target=production
+npm run dev
 ```
 
 **Saída Esperada:**
 ```text
-[INFO] Iniciando validação do banco de dados...
-[SUCCESS] 15/15 tabelas verificadas.
-[WARNING] Coluna 'descricao' na tabela 'produtos' é nullable.
-[SUCCESS] Validação concluída. Nenhum erro crítico encontrado.
-Tempo de execução: 1.25s
+  VITE v8.3.4  ready in 350 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+```
+
+---
+
+#### 2. Demonstração do Build de Produção
+
+Verifica os tipos com o TypeScript e gera os arquivos estáticos na pasta `dist`.
+
+```bash
+npm run build
+```
+
+**Saída Esperada:**
+```text
+> portfolio@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.4 building for production...
+✓ módulos transformados.
+dist/index.html
+dist/assets/...
+✓ built in ...
 ```
 
 ---
@@ -674,20 +602,23 @@ Tempo de execução: 1.25s
 ## 🧪 Testes
 
 ### Testes Unitários e de Integração
-Para rodar os testes da unidade e integração:
+Ainda não há testes automatizados neste projeto.
 
-```
-npm run test
-```
-*Ferramenta utilizada: Jest, Vitest, Mocha, etc.*
+*Ferramenta sugerida: Vitest com React Testing Library.*
 
 ### Testes End-to-End (E2E)
-Para rodar os testes de ponta a ponta (E2E):
+Ainda não há testes de ponta a ponta neste projeto.
+
+*Ferramenta sugerida: Playwright.*
+
+### Verificações Disponíveis
+Enquanto os testes automatizados não são implementados, utilize as verificações abaixo antes de cada commit:
 
 ```
-npm run test:e2e
+npm run lint
+npm run build
 ```
-*Ferramenta utilizada: Cypress, Playwright, Selenium, etc.*
+*Ferramentas utilizadas: oxlint (análise estática) e TypeScript (verificação de tipos).*
 
 ---
 
@@ -696,11 +627,13 @@ npm run test:e2e
 Liste aqui links para documentação técnica, referências de bibliotecas complexas ou guias de estilo que foram cruciais para o projeto.
 
 * 📖 **Framework/Biblioteca (Front-end):** [Documentação Oficial do **React**](https://react.dev/reference/react)
-* 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vitejs.dev/config/)
-* 📖 **Framework (Back-end):** [Documentação Oficial do **Spring Boot**](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-* 📖 **Containerização:** [Documentação de Referência do **Docker**](https://docs.docker.com/)
+* 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vite.dev/config/)
+* 📖 **Linguagem:** [Documentação do **TypeScript**](https://www.typescriptlang.org/docs/)
+* 📖 **Roteamento:** [Documentação do **React Router**](https://reactrouter.com/)
+* 📖 **Animações:** [Documentação do **Motion para React**](https://motion.dev/docs/react)
+* 📖 **Envio de E-mail:** [Documentação do **EmailJS**](https://www.emailjs.com/docs/)
+* 📖 **Lint:** [Documentação do **oxlint**](https://oxc.rs/docs/guide/usage/linter.html)
 * 📖 **Guia de Estilo:** [**Conventional Commits** (Padrão de Mensagens)](https://www.conventionalcommits.org/en/v1.0.0/)
-* 📖 **Documentação Interna:** [Design System do Projeto](./docs/design-system.md)
 
 ---
 
@@ -709,8 +642,7 @@ Liste os principais contribuidores. Você pode usar links para seus perfis.
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
-| Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user1"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user1"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user1@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
-| Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/user2"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/user2"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:user2@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| Vítor Augusto de Souza | <div align="center"><img src="https://github.com/Vitor-vas.png?size=140" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/Vitor-vas"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/vitorasouza/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:vitoraugustosouzas007@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 
 > [!TIP]
 > 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
@@ -718,34 +650,31 @@ Liste os principais contribuidores. Você pode usar links para seus perfis.
 ---
 
 ## 🤝 Contribuição
-Guia para contribuições ao projeto.
+Este é um projeto pessoal, mas sugestões e correções são bem-vindas. Para contribuir:
 
 1.  Faça um `fork` do projeto.
 2.  Crie uma branch para sua feature (`git checkout -b feature/minha-feature`).
-3. Commit suas mudanças (`git commit -m 'feat: Adiciona nova funcionalidade X'`). **(Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))**
+3. Commit suas mudanças (`git commit -m 'feat: adiciona nova funcionalidade X'`). **(Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))**
 4.  Faça o `push` para a branch (`git push origin feature/minha-feature`).
 5.  Abra um **Pull Request (PR)**.
 
 > [!IMPORTANT]
-> 📝 **Regras:** Por favor, verifique o arquivo [`CONTRIBUTING.md`](./CONTRIBUTING.md) para detalhes sobre nosso guia de estilo de código e o processo de submissão de PRs.
+> 📝 **Regras:** Antes de abrir um Pull Request, execute `npm run lint` e `npm run build` para garantir que o código passa na análise estática e na verificação de tipos.
 
 ---
 
 ## 🙏 Agradecimentos
 Em ambiente acadêmico, citar fontes e inspirações é crucial (integridade acadêmica). Em ambiente profissional, mostra humildade e conexão com a comunidade.
 
-Gostaria de agradecer aos seguintes canais e pessoas que foram fundamentais para o desenvolvimento deste projeto:
+Gostaria de agradecer às seguintes pessoas e instituições que foram fundamentais para o desenvolvimento deste projeto:
 
 * [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/) - Pelo apoio institucional, estrutura acadêmica e fomento à inovação e boas práticas de engenharia.
-* [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni) - Pelos valiosos ensinamentos sobre **Arquitetura de Software** e **Padrões de Projeto**.
-* [**Fernanda Kipper**](https://www.instagram.com/kipper.dev/) - Pelos valiosos ensinamentos em **Desenvolvimento Web**, **DevOps** e melhores práticas em **Front-end**.
-* [**Rodrigo Branas**](https://branas.io/) - Pela didática excepcional em **Clean Architecture** e **Clean Code**.
-* [**Código Fonte TV**](https://codigofonte.tv/) - Pelo vasto conteúdo e cobertura de notícias, tutoriais e apoio à comunidade de **Desenvolvimento Web**.
+* [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni) - Pelo template de documentação que serviu de base para este README.
 
 ---
 
 ## 📄 Licença
 
-Este projeto é distribuído sob a **[Licença MIT](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/blob/main/LICENSE)**.
+Este projeto é distribuído sob a **[Licença MIT](./LICENSE)**.
 
 ---
