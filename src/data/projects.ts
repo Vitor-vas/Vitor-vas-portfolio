@@ -1,45 +1,68 @@
 import type { Project } from '../types/Index';
 
-// Projects made by me no need to change id nor tag
+// Add or remove items freely, the carousel adapts to the number of projects.
+// `subtitle` and `description` have an English (EN) and a Portuguese (PTBR) text.
+//
+// IMAGE (shown on the right side of the selected card), pick one way:
+//   image: 'psyche.png'              -> file in src/assets/projects/psyche.png
+//   image: '/projects/psyche.png'    -> file in public/projects/psyche.png
+//   image: 'https://site.com/a.png'  -> external image
+// Without `image`, a placeholder is shown.
 export const projects: Project[] = [
   {
     id: 'project-1',
-    tag: '01 // PROJECT',
     title: 'Psyche',
-    subtitle: 'Psychologist-Pacient management system',
-    description: 'System that connects psychologists and their pacients, with dashboard. Puc 1st semester.',
+    subtitle: {
+      EN: 'Psychologist-Patient management system',
+      PTBR: 'Sistema de gestão psicólogo-paciente',
+    },
+    description: {
+      EN: 'System that connects psychologists and their patients, with dashboard. PUC 1st semester.',
+      PTBR: 'Sistema que conecta psicólogos e seus pacientes, com dashboard. PUC, 1º semestre.',
+    },
     stack: ['JavaScript', 'JSONServer', 'HTML', 'CSS'],
     repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2',
-    image: 'InnertripDashboard.jpeg',
   },
   {
     id: 'project-2',
-    tag: '02 // PROJECT',
     title: 'Collect Game',
-    subtitle: 'Python dungeon crawler',
-    description: 'Short dungeon crawler game made with python.',
+    subtitle: {
+      EN: 'Python dungeon crawler',
+      PTBR: 'Dungeon crawler em Python',
+    },
+    description: {
+      EN: 'Short dungeon crawler game made with Python.',
+      PTBR: 'Pequeno jogo de dungeon crawler feito com Python.',
+    },
     stack: ['Python', 'Pygame', 'Pytest'],
     repo: 'https://github.com/Vitor-vas/CollectGame_Python',
-    image: 'CollectGame.jpg',
   },
   {
     id: 'project-3',
-    tag: '03 // PROJECT',
     title: 'Portoes do Ceu',
-    subtitle: 'Hospital management system',
-    description: 'System that manages a hospital and its workers, with dashboard. Puc 2st semester. Ongoing',
+    subtitle: {
+      EN: 'Hospital management system',
+      PTBR: 'Sistema de gestão hospitalar',
+    },
+    description: {
+      EN: 'System that manages a hospital and its workers, with dashboard. PUC 2nd semester. Ongoing.',
+      PTBR: 'Sistema que gerencia um hospital e seus funcionários, com dashboard. PUC, 2º semestre. Em andamento.',
+    },
     stack: ['Thymeleaf', 'Java', 'Springboot'],
     repo: 'https://github.com/leopettersen/TP-sistema-hospitalar',
-    image: 'PortoesDoCeu.jpg',
   },
   {
     id: 'project-4',
-    tag: '04 // PROJECT',
     title: 'Athenas',
-    subtitle: 'Universisties information distribution',
-    description: 'System that connects workers and graduates with to be students to share information about a broad range of courses. Puc 2st semester. Ongoing.',
+    subtitle: {
+      EN: 'University information distribution',
+      PTBR: 'Distribuição de informações universitárias',
+    },
+    description: {
+      EN: 'System that connects workers and graduates with prospective students to share information about a broad range of courses. PUC 2nd semester. Ongoing.',
+      PTBR: 'Sistema que conecta profissionais e formados com futuros alunos para compartilhar informações sobre uma grande variedade de cursos. PUC, 2º semestre. Em andamento.',
+    },
     stack: ['React', 'Typescript'],
     repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-2-ti2-8243100-atenas/',
-    image: 'Athenas.jpg', 
   },
 ];

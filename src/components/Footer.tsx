@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { competencies, links } from '../data/cards';
+import { useLang } from '../context/Languagecontext.ts';
+import { useT } from '../i18n/translations.ts';
 
 export default function Footer() {
+  const { lang } = useLang();
+  const t = useT();
+
   return (
     <motion.footer
       className="footer"
@@ -11,8 +16,8 @@ export default function Footer() {
     >
       <div className="footer-row">
         <div className="chips">
-          <span className="chips-label">DESIRED ROLES:</span>
-          {competencies.map((c) => (
+          <span className="chips-label">{t.footer.competencies}</span>
+          {competencies[lang].map((c) => (
             <span key={c} className="chip">{c}</span>
           ))}
         </div>
@@ -26,8 +31,8 @@ export default function Footer() {
       </div>
 
       <div className="footer-row footer-bottom">
-        <span>● AVAILABLE FOR HIRING</span>
-        <span>© Vitor A. Souza — All Rights Reserved</span>
+        <span>{t.footer.available}</span>
+        <span>{t.footer.rights}</span>
       </div>
     </motion.footer>
   );

@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import { useT } from '../i18n/translations.ts';
 
 export default function StatusBar() {
+  const t = useT();
   const [time, setTime] = useState(() => new Date());
 
   useEffect(() => {
-    const t = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(t);
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
   }, []);
 
   const clock = time.toLocaleTimeString('pt-BR', {
@@ -23,9 +25,9 @@ export default function StatusBar() {
     >
       <span>BELO HORIZONTE, MG <em>/ UTC-03 {clock}</em></span>
       <span>
-        <b>PORTFOLIO V1.0</b> · DECK OF ME
+        <b>{t.statusBar.archive}</b> · {t.statusBar.folio}
       </span>
-      <span>STATUS: <b>AVAILABLE FOR HIRING</b></span>
+      <span>{t.statusBar.status}: <b>{t.statusBar.available}</b></span>
     </motion.div>
   );
 }

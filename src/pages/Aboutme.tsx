@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { animate, AnimatePresence, motion, useMotionValue, useTransform } from 'motion/react';
 
+import PageHeader from '../components/Pageheader.tsx';
 import { useLang } from '../context/Languagecontext.ts';
 import type { Lang } from '../types/Index.ts';
 import '../styles/aboutme.css';
@@ -24,7 +25,7 @@ const CONTENT: Record<Lang, AboutContent> = {
     subtitle: 'Software Engineer & Full-Stack',
     paragraphs: [
       "I'm Vitor Augusto de Souza, a Software Engineering student at PUC Minas (2nd semester) based in Belo Horizonte, Brazil. I build resilient web architectures, distributed systems and interfaces based on human interactions (HCI).",
-      "I enjoy full-stack work, building systems based on OOP principles and polishing the details of a UI animation. I'm open to internships and freelance jobs, seeking oportunities in such areas.",
+      "I enjoy full-stack work, building systems based on OOP principles and polishing the details of a UI animation. I'm open to internships and freelance jobs.",
     ],
     stack: ['React', 'TypeScript', 'Java', 'Python'],
     footerLabel: 'Institution',
@@ -37,7 +38,7 @@ const CONTENT: Record<Lang, AboutContent> = {
     subtitle: 'Engenheiro de Software & Full-Stack',
     paragraphs: [
       'Sou Vitor Augusto de Souza, estudante de Engenharia de Software na PUC Minas (2º semestre) residente em Belo Horizonte, Brasil. Desenvolvo arquiteturas web resilientes, sistemas distribuídos e interfaces baseadas em interação humano-computador (IHC).',
-      'Gosto de trabalho full-stack, da construção de sistemas baseados nas regras de POO e do refinamento dos detalhes de animações de UI. Estou aberto a oportunidades de estágio e trabalhos como freelancer. Procurando oportunidades nessas áreas',
+      'Gosto de trabalho full-stack, da construção de sistemas baseados nas regras de POO e do refinamento dos detalhes de animações de UI. Estou aberto a oportunidades de estágio e trabalhos como freelancer.',
     ],
     stack: ['React', 'TypeScript', 'Java', 'Python'],
     footerLabel: 'Instituição',
@@ -68,69 +69,74 @@ export default function Aboutme() {
   };
 
   return (
-    <section className="about-stage" ref={stageRef}>
-      <motion.article
-        className="about-card"
-        style={{ x, y, rotate }}
-        drag
-        dragConstraints={stageRef}
-        dragElastic={0.2}
-        dragTransition={{ bounceStiffness: 300, bounceDamping: 22 }}
-        whileDrag={{ scale: 1.04, boxShadow: '0 40px 90px rgba(0,0,0,.55)' }}
-        initial={{ opacity: 0, scale: 0.92 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: 'spring', stiffness: 120, damping: 16 }}
-        onDoubleClick={recenter}
-      >
-        {/* The card itself stays where it is; only its content fades when the language changes.
-            `key={lang}` tells AnimatePresence the content is "a different one". */}
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={lang}
-            className="about-content"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="about-top">
-              <span className="about-tag">
-                <i className="dot" /> {about.tag}
-              </span>
-            </div>
+    <>
+      {/* The card already has its own big title, so only the back button here */}
+      <PageHeader />
 
-            <div className="about-body">
-              <h2 className="about-title">{about.title}</h2>
-              <p className="about-subtitle">{about.subtitle.toUpperCase()}</p>
-
-              {about.paragraphs.map((text) => (
-                <p key={text} className="about-text">{text}</p>
-              ))}
-
-              <ul className="about-stack">
-                {about.stack.map((item, i) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + i * 0.07 }}
-                  >
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="about-footer">
-              <div>
-                <small>{about.footerLabel.toUpperCase()}</small>
-                <strong>{about.footerValue}</strong>
+      <section className="about-stage" ref={stageRef}>
+        <motion.article
+          className="about-card"
+          style={{ x, y, rotate }}
+          drag
+          dragConstraints={stageRef}
+          dragElastic={0.2}
+          dragTransition={{ bounceStiffness: 300, bounceDamping: 22 }}
+          whileDrag={{ scale: 1.04, boxShadow: '0 40px 90px rgba(0,0,0,.55)' }}
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: 'spring', stiffness: 120, damping: 16 }}
+          onDoubleClick={recenter}
+        >
+          {/* The card itself stays where it is; only its content fades when the language changes.
+              `key={lang}` tells AnimatePresence the content is "a different one". */}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={lang}
+              className="about-content"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="about-top">
+                <span className="about-tag">
+                  <i className="dot" /> {about.tag}
+                </span>
               </div>
-              <span className="about-hint">{about.hint}</span>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </motion.article>
-    </section>
+
+              <div className="about-body">
+                <h2 className="about-title">{about.title}</h2>
+                <p className="about-subtitle">{about.subtitle.toUpperCase()}</p>
+
+                {about.paragraphs.map((text) => (
+                  <p key={text} className="about-text">{text}</p>
+                ))}
+
+                <ul className="about-stack">
+                  {about.stack.map((item, i) => (
+                    <motion.li
+                      key={item}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + i * 0.07 }}
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="about-footer">
+                <div>
+                  <small>{about.footerLabel.toUpperCase()}</small>
+                  <strong>{about.footerValue}</strong>
+                </div>
+                <span className="about-hint">{about.hint}</span>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.article>
+      </section>
+    </>
   );
 }

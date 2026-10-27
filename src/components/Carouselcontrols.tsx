@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { useT } from '../i18n/translations.ts';
 import type { SetNumber } from '../types/Index';
 
 interface CarouselControlsProps {
@@ -8,6 +9,7 @@ interface CarouselControlsProps {
 }
 
 export default function CarouselControls({ total, active, setActive }: CarouselControlsProps) {
+  const t = useT();
   const prev = () => setActive((i) => Math.max(0, i - 1));
   const next = () => setActive((i) => Math.min(total - 1, i + 1));
 
@@ -19,7 +21,7 @@ export default function CarouselControls({ total, active, setActive }: CarouselC
       transition={{ delay: 0.5, duration: 0.6 }}
     >
       <div className="controls">
-        <motion.button whileTap={{ x: -4 }} onClick={prev} aria-label="Previous">←</motion.button>
+        <motion.button whileTap={{ x: -4 }} onClick={prev} aria-label={t.carousel.previous}>←</motion.button>
 
         {Array.from({ length: total }, (_, i) => (
           <button
@@ -39,9 +41,9 @@ export default function CarouselControls({ total, active, setActive }: CarouselC
           </button>
         ))}
 
-        <motion.button whileTap={{ x: 4 }} onClick={next} aria-label="Next">→</motion.button>
+        <motion.button whileTap={{ x: 4 }} onClick={next} aria-label={t.carousel.next}>→</motion.button>
       </div>
-      <p className="hint">DRAG OR CLICK WINGS TO UNFOLD CAROUSEL</p>
+      <p className="hint">{t.carousel.hint}</p>
     </motion.div>
   );
 }

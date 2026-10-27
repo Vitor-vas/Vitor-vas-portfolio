@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, type PanInfo, type Variants } from 'motion/react';
 
 import CarouselControls from '../components/Carouselcontrols.tsx';
+import PageHeader from '../components/Pageheader.tsx';
+import { useLang } from '../context/Languagecontext.ts';
+import { useT } from '../i18n/translations.ts';
 import { projects } from '../data/projects.ts';
 import { resolveProjectImage } from '../utils/Projectimage.ts';
 import type { Project } from '../types/Index.ts';
@@ -88,6 +91,7 @@ function useViewportWidth() {
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
   offset: number;
   state: CardState;
   variants: Variants;
@@ -97,8 +101,12 @@ interface ProjectCardProps {
   onClose: () => void;
 }
 
-function ProjectCard({ project, offset, state, variants, selected, compact, onClick, onClose }: ProjectCardProps) {
+function ProjectCard({ project, index, offset, state, variants, selected, compact, onClick, onClose }: ProjectCardProps) {
+  const { lang } = useLang();
+  const t = useT();
   const isSelected = state === 'selected';
+  // "01 // PROJECT" / "01 // PROJETO"
+  const tag = `${String(index + 1).padStart(2, '0')} // ${t.projects.project}`;
   const visible = Math.abs(offset) <= VISIBLE;
   // Cards on the right are covered on their left side by the center card,
   // so their text sticks to the right (and vice versa) to stay readable.
@@ -123,7 +131,7 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
       role={isSelected ? undefined : 'button'}
       tabIndex={state === 'fan' && visible ? 0 : -1}
       aria-hidden={state === 'hidden' || !visible}
-      aria-label={isSelected ? undefined : `${offset === 0 ? 'Open' : 'Show'} ${project.title}`}
+      aria-label={isSelected ? undefined : `${offset === 0 ? t.projects.open : t.projects.show} ${project.title}`}
       onClick={(e) => {
         e.stopPropagation(); // don't trigger the stage "click outside to close"
         onClick();
@@ -144,12 +152,12 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
       >
         <div className="proj-top">
           <span className="proj-tag">
-            <i className="dot" /> {project.tag}
+            <i className="dot" /> {tag}
           </span>
         </div>
         <div className="proj-body">
           <h2 className="proj-title">{project.title}</h2>
-          <p className="proj-subtitle">{project.subtitle.toUpperCase()}</p>
+          <p className="proj-subtitle">{project.subtitle[lang].toUpperCase()}</p>
         </div>
         <div className="proj-footer">{project.stack.slice(0, 3).join(' · ')}</div>
       </motion.div>
@@ -166,16 +174,16 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
         <div className="proj-sel-text">
           <div className="proj-top">
             <span className="proj-tag">
-              <i className="dot" /> {project.tag}
+              <i className="dot" /> {tag}
             </span>
-            <button className="proj-close" onClick={onClose} aria-label="Close project" tabIndex={isSelected ? 0 : -1}>
+            <button className="proj-close" onClick={onClose} aria-label={t.projects.close} tabIndex={isSelected ? 0 : -1}>
               ✕
             </button>
           </div>
 
           <h2 className="proj-title">{project.title}</h2>
-          <p className="proj-subtitle">{project.subtitle.toUpperCase()}</p>
-          <p className="proj-desc">{project.description}</p>
+          <p className="proj-subtitle">{project.subtitle[lang].toUpperCase()}</p>
+          <p className="proj-desc">{project.description[lang]}</p>
 
           <ul className="proj-stack">
             {project.stack.map((item) => (
@@ -185,10 +193,10 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
 
           <div className="proj-links">
             {project.repo && (
-              <a href={project.repo} target="_blank" rel="noreferrer" tabIndex={isSelected ? 0 : -1}>REPO ↗</a>
+              <a href={project.repo} target="_blank" rel="noreferrer" tabIndex={isSelected ? 0 : -1}>{t.projects.repo} ↗</a>
             )}
             {project.demo && (
-              <a href={project.demo} target="_blank" rel="noreferrer" tabIndex={isSelected ? 0 : -1}>LIVE DEMO ↗</a>
+              <a href={project.demo} target="_blank" rel="noreferrer" tabIndex={isSelected ? 0 : -1}>{t.projects.demo} ↗</a>
             )}
           </div>
         </div>
@@ -196,9 +204,9 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
         {/* Image slot: shows project.image, or a placeholder until you add one */}
         <div className="proj-image">
           {imageUrl ? (
-            <img src={imageUrl} alt={`${project.title} preview`} draggable={false} />
+            <img src={imageUrl} alt={`${project.title} ${t.projects.preview}`} draggable={false} />
           ) : (
-            <span>IMAGE</span>
+            <span>{t.projects.image}</span>
           )}
         </div>
       </motion.div>
@@ -207,6 +215,7 @@ function ProjectCard({ project, offset, state, variants, selected, compact, onCl
 }
 
 export default function Projects() {
+  const t = useT();
   const [active, setActive] = useState(0);
   const [open, setOpen] = useState(false);
   // After a swipe the browser still fires a "click"; this flag lets us ignore it
@@ -257,49 +266,53 @@ export default function Projects() {
   };
 
   return (
-    <div className="projects-page">
-      {/* Clicking the empty stage while a project is open brings the carousel back */}
-      <motion.section className="projects-stage" onPanEnd={onPanEnd} onClick={open ? close : undefined}>
-        <AnimatePresence>
-          {open && (
-            <motion.p
-              className="projects-hint"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              ESC OR CLICK OUTSIDE TO GO BACK
-            </motion.p>
-          )}
-        </AnimatePresence>
+    <>
+      <PageHeader title={t.pages.projects} />
+      <div className="projects-page">
+        {/* Clicking the empty stage while a project is open brings the carousel back */}
+        <motion.section className="projects-stage" onPanEnd={onPanEnd} onClick={open ? close : undefined}>
+          <AnimatePresence>
+            {open && (
+              <motion.p
+                className="projects-hint"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {t.projects.hint}
+              </motion.p>
+            )}
+          </AnimatePresence>
 
-        {projects.map((project, i) => {
-          const state: CardState = !open ? 'fan' : i === active ? 'selected' : 'hidden';
+          {projects.map((project, i) => {
+            const state: CardState = !open ? 'fan' : i === active ? 'selected' : 'hidden';
 
-          return (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              offset={i - active}
-              state={state}
-              variants={variants}
-              selected={selected}
-              compact={compact}
-              onClick={() => handleCardClick(i)}
-              onClose={close}
-            />
-          );
-        })}
-      </motion.section>
+            return (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={i}
+                offset={i - active}
+                state={state}
+                variants={variants}
+                selected={selected}
+                compact={compact}
+                onClick={() => handleCardClick(i)}
+                onClose={close}
+              />
+            );
+          })}
+        </motion.section>
 
-      {/* Carousel controls: right under the cards (faded out while a project is open) */}
-      <motion.div
-        className="projects-controls"
-        animate={{ opacity: open ? 0 : 1 }}
-        style={{ pointerEvents: open ? 'none' : 'auto' }}
-      >
-        <CarouselControls total={total} active={active} setActive={setActive} />
-      </motion.div>
-    </div>
+        {/* Carousel controls: right under the cards (faded out while a project is open) */}
+        <motion.div
+          className="projects-controls"
+          animate={{ opacity: open ? 0 : 1 }}
+          style={{ pointerEvents: open ? 'none' : 'auto' }}
+        >
+          <CarouselControls total={total} active={active} setActive={setActive} />
+        </motion.div>
+      </div>
+    </>
   );
 }

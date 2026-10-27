@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 56px 48px 80px;
+  padding: 24px 48px 80px;
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 56px;
@@ -70,7 +70,7 @@
 
 /* ---------- smaller screens ---------- */
 @media (max-width: 900px) {
-  .exp-page { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 32px 20px 64px; }
+  .exp-page { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 16px 4px 48px; }
   .exp-aside { position: static; }
   .exp-title { font-size: 44px; }
 }

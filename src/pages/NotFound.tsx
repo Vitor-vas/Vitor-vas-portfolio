@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom';
+import PageHeader from '../components/Pageheader.tsx';
+import { useT } from '../i18n/translations.ts';
 
 export default function NotFound() {
+  const t = useT();
+
   return (
-    <section className="page">
-      <Link to="/" className="back-link">← BACK</Link>
-      <h2 className="page-title">404 — Page not found</h2>
-      <p className="page-text">This route does not exist.</p>
-    </section>
+    <>
+      <PageHeader title={t.pages.notFound} />
+      <section className="page">
+        <p className="page-text">{t.notFound.text}</p>
+      </section>
+    </>
   );
 }

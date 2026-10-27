@@ -49,3 +49,7 @@
   .about-footer { flex-direction: column; align-items: flex-start; }
   .about-hint { text-align: left; }
 }
+
+@media (max-width: 720px) {
+  .about-stage { min-height: 560px; }
+}

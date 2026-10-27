@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
+import PageHeader from '../components/Pageheader.tsx';
 import { experiences } from '../data/experiences.ts';
 import { useLang } from '../context/Languagecontext.ts';
 import type { Experience, Lang } from '../types/Index.ts';
@@ -203,32 +204,37 @@ export default function Experiences() {
   const firstYear = Math.min(...experiences.map((e) => parse(e.start)[0]));
 
   return (
-    <section className="exp-page">
-      <motion.aside
-        className="exp-aside"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-      >
-        <span className="exp-tag">{ui.tag}</span>
-        <h2 className="exp-title">{ui.title}</h2>
-        <p className="exp-count">{ui.count(experiences.length, firstYear)}</p>
-      </motion.aside>
+    <>
+      {/* The page already has its own big title, so only the back button here */}
+      <PageHeader />
 
-      <div className="exp-timeline-wrap">
-        {/* The vertical line draws itself from top to bottom */}
-        <motion.span
-          className="exp-line"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
-        />
-        <ol className="exp-timeline">
-          {experiences.map((exp, i) => (
-            <ExperienceItem key={exp.id} exp={exp} index={i} lang={lang} ui={ui} />
-          ))}
-        </ol>
-      </div>
-    </section>
+      <section className="exp-page">
+        <motion.aside
+          className="exp-aside"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          <span className="exp-tag">{ui.tag}</span>
+          <h2 className="exp-title">{ui.title}</h2>
+          <p className="exp-count">{ui.count(experiences.length, firstYear)}</p>
+        </motion.aside>
+
+        <div className="exp-timeline-wrap">
+          {/* The vertical line draws itself from top to bottom */}
+          <motion.span
+            className="exp-line"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
+          />
+          <ol className="exp-timeline">
+            {experiences.map((exp, i) => (
+              <ExperienceItem key={exp.id} exp={exp} index={i} lang={lang} ui={ui} />
+            ))}
+          </ol>
+        </div>
+      </section>
+    </>
   );
 }

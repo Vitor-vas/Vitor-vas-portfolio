@@ -8,7 +8,7 @@
 
   width: 100%;
   max-width: 760px;
-  margin: 48px auto;
+  margin: 16px auto 48px;
   padding: 44px 48px;
   border-radius: 20px;
   background: linear-gradient(160deg, #26242d, #1c1b22);
@@ -89,3 +89,7 @@
   .contact-actions { flex-direction: column; align-items: stretch; }
   .contact-actions-right { justify-content: space-between; }
 }
+
+/* Touch screens have no keyboard shortcut */
+@media (hover: none) { .shortcut { display: none; } }
+@media (max-width: 480px) { .social-group { gap: 8px; } .send-btn { justify-content: center; } }

@@ -28,10 +28,9 @@ export type SendStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export interface Project {
   id: string;
-  tag: string;
   title: string;
-  subtitle: string;
-  description: string;
+  subtitle: Localized<string>;
+  description: Localized<string>;
   stack: string[];
   repo?: string;
   demo?: string;
