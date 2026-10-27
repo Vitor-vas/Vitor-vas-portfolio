@@ -74,7 +74,7 @@
 ---
 
 ## 🔗 Links Úteis
-* 🌐 **Demo Online:** [Acesse a Aplicação Web](<link-da-demo-web>)
+* 🌐 **Demo Online:** [Acesse a Aplicação Web](https://vitor-vas-portfolio.onrender.com/)
   > 💻 **Descrição:** Link para o portfólio em ambiente de produção (Ex: hospedado na Vercel, Netlify ou GitHub Pages).
 * 👤 **Perfis Profissionais:** [GitHub](https://github.com/Vitor-vas) | [LinkedIn](https://www.linkedin.com/in/vitorasouza/) | [E-mail](mailto:vitoraugustosouzas007@gmail.com)
   > 🔗 **Descrição:** Links diretos para o meu código, perfil profissional e contato por e-mail.
@@ -517,43 +517,6 @@ Descreva o propósito das pastas principais.
 ```
 
 ---
-
-## 🎥 Demonstração
-
-Use GIFs e prints para mostrar o projeto em ação.  
-
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
-
-### 📱 Versão Mobile (Responsiva)
-
-- GIF de demonstração (exemplo de navegação no celular):  
-
-| Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
-|----------------|----------------|----------------|----------------|
-| _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Sobre mim** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Projetos** | **Contato** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-
-### 🌐 Aplicação Web
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Sobre mim** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Projetos** | **Projeto Selecionado** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
-| **Experiência** | **Contato** |
-| _Sua captura aqui_ | _Sua captura aqui_ |
 
 ### 💻 Exemplo de Saída no Terminal (para Build e Servidor de Desenvolvimento)
 
