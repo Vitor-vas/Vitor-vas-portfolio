@@ -1,8 +1,4 @@
 import type { Experience } from '../types/Index.ts';
-
-// Newest first. Dates use 'YYYY-MM'; leave `end` out for a role that is still ongoing.
-// Every text has an English (EN) and a Portuguese (PTBR) version.
-// The first 3 highlights are always visible; the others appear with "SHOW MORE".
 export const experiences: Experience[] = [
   {
     id: 'gc-promotora',

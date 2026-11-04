@@ -1,7 +1,4 @@
 import type { CardData, Lang, Localized, SocialLink } from '../types/Index';
-
-// Cards of the Home carousel, one list per language.
-// Both lists must keep the same order, ids and paths.
 export const cardsByLang: Record<Lang, CardData[]> = {
   EN: [
     {

@@ -1,9 +1,5 @@
 import { useLang } from '../context/Languagecontext.ts';
 import type { Lang } from '../types/Index.ts';
-
-// Texts shared by the whole site. TypeScript forces EN and PTBR to have the same keys,
-// so a missing translation is a compile error instead of a blank spot on the page.
-// (The texts of About, Experience, Projects and the Home cards live next to their data.)
 export interface Translations {
   back: string;
   header: {

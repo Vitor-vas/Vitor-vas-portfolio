@@ -1,13 +1,4 @@
 import type { Project } from '../types/Index';
-
-// Add or remove items freely, the carousel adapts to the number of projects.
-// `subtitle` and `description` have an English (EN) and a Portuguese (PTBR) text.
-//
-// IMAGE (shown on the right side of the selected card), pick one way:
-//   image: 'psyche.png'              -> file in src/assets/projects/psyche.png
-//   image: '/projects/psyche.png'    -> file in public/projects/psyche.png
-//   image: 'https://site.com/a.png'  -> external image
-// Without `image`, a placeholder is shown.
 export const projects: Project[] = [
   {
     id: 'project-1',
@@ -21,6 +12,7 @@ export const projects: Project[] = [
       PTBR: 'Sistema que conecta psicólogos e seus pacientes, com dashboard. PUC, 1º semestre.',
     },
     stack: ['JavaScript', 'JSONServer', 'HTML', 'CSS'],
+    image: 'InnertripDashboard.jpeg',
     repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2',
   },
   {
@@ -35,6 +27,7 @@ export const projects: Project[] = [
       PTBR: 'Pequeno jogo de dungeon crawler feito com Python.',
     },
     stack: ['Python', 'Pygame', 'Pytest'],
+    image: 'CollectGame.jpg',
     repo: 'https://github.com/Vitor-vas/CollectGame_Python',
   },
   {
@@ -49,6 +42,7 @@ export const projects: Project[] = [
       PTBR: 'Sistema que gerencia um hospital e seus funcionários, com dashboard. PUC, 2º semestre. Em andamento.',
     },
     stack: ['Thymeleaf', 'Java', 'Springboot'],
+    image: 'PortoesDoCeu.jpg',
     repo: 'https://github.com/leopettersen/TP-sistema-hospitalar',
   },
   {
@@ -63,6 +57,7 @@ export const projects: Project[] = [
       PTBR: 'Sistema que conecta profissionais e formados com futuros alunos para compartilhar informações sobre uma grande variedade de cursos. PUC, 2º semestre. Em andamento.',
     },
     stack: ['React', 'Typescript'],
+    image: 'Athenas.jpg',
     repo: 'https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-2-ti2-8243100-atenas/',
   },
 ];

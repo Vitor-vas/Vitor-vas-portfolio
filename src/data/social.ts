@@ -1,6 +1,4 @@
 import type { SocialLink } from '../types/Index.ts';
-
-// Buttons shown at the top of the Contact page.
 export const contactLinks: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/Vitor-vas' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vitorasouza/' },
