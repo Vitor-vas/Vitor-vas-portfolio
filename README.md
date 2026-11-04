@@ -26,14 +26,10 @@
 
 ## 🚧 Status do Projeto
 
-### Exemplos de badges básicos:
-
 ![Status](https://img.shields.io/badge/Status-Em_desenvolvimento-yellow)
-![Versão](https://img.shields.io/badge/Versão-v0.0.0-blue)
+![Versão](https://img.shields.io/badge/Versão-v1.0.1-blue)
 ![Lint](https://img.shields.io/badge/Lint-oxlint-success)
 [![Licença](https://img.shields.io/github/license/Vitor-vas/Vitor-vas-portfolio)](#-licença)
-
-### Outros exemplos de badges:
 
 ![React](https://img.shields.io/badge/React-19.3.0-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-8.3.4-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-007ec6?style=for-the-badge&logo=typescript&logoColor=white) ![Motion](https://img.shields.io/badge/Motion-14.2.0-007ec6?style=for-the-badge&logo=framer&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-7.18.4-007ec6?style=for-the-badge&logo=reactrouter&logoColor=white) ![EmailJS](https://img.shields.io/badge/EmailJS-4.4.1-007ec6?style=for-the-badge&logo=maildotru&logoColor=white) ![GitHub repo size](https://img.shields.io/github/repo-size/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=files) ![GitHub directory file count](https://img.shields.io/github/directory-file-count/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=files) ![GitHub stars](https://img.shields.io/github/stars/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=typescript) ![GitHub license](https://img.shields.io/github/license/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&color=007ec6&logo=gitkraken) ![GitHub last commit](https://img.shields.io/github/last-commit/Vitor-vas/Vitor-vas-portfolio?style=for-the-badge&logo=clockify) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2FVitor-vas%2FVitor-vas-portfolio&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
 
