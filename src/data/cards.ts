@@ -8,7 +8,7 @@ export const cardsByLang: Record<Lang, CardData[]> = {
       subtitle: 'Software Engineer & Full-Stack',
       description:
         'Engineering resilient web architectures, distributed systems, and tactile human interfaces at PUC Minas.',
-      code: '$ stack.load(["React", "TypeScript", "Java"])',
+      code: '$ stack.load(["React", "TypeScript", "Java", "Angular", "Webstorm"])',
       footerLabel: 'Institution',
       footerValue: 'PUC Minas • 2nd Sem',
       action: 'Dossier',
@@ -98,8 +98,8 @@ export const cardsByLang: Record<Lang, CardData[]> = {
 };
 
 export const competencies: Localized<string[]> = {
-  EN: ['System Design', 'React Full-Stack', 'PostgreSQL'],
-  PTBR: ['Design de Sistemas', 'React Full-Stack', 'PostgreSQL'],
+  EN: ['Design System', 'React/Angular Full-Stack', 'PostgreSQL', 'Webstorm'],
+  PTBR: ['Design de Sistemas', 'React/Angular Full-Stack', 'PostgreSQL', 'Webstorm'],
 };
 
 export const links: SocialLink[] = [
